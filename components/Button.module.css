@@ -2,7 +2,6 @@
 .link {
   display: inline-flex;
   align-items: center;
-  justify-content: center;
   font-family: var(--font-sans);
   font-size: var(--text-small);
   font-weight: 500;
@@ -10,6 +9,7 @@
 }
 
 .primary {
+  justify-content: center;
   padding: 0.875rem 2rem;
   text-transform: uppercase;
   letter-spacing: 0.06em;
@@ -23,6 +23,8 @@
 }
 
 .link {
+  justify-content: flex-start;
+  align-self: flex-start;
   letter-spacing: 0.04em;
   color: var(--color-heading);
   border-bottom: 1px solid var(--color-border);

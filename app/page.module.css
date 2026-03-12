@@ -87,6 +87,7 @@
 .statValue {
   margin-top: var(--space-xs);
   font-size: var(--text-h3);
+  font-weight: 500;
 }
 
 .sectionIntro {
@@ -111,6 +112,7 @@
 .sectionAction,
 .darkAction {
   margin-top: var(--space-lg);
+  text-align: left;
 }
 
 .darkAction :global(a) {

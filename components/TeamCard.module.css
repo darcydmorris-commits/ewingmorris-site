@@ -31,8 +31,19 @@
   font-style: italic;
 }
 
+.bioGroup {
+  display: grid;
+  gap: var(--space-sm);
+}
+
 .bio {
   color: var(--color-text);
+}
+
+.tagline {
+  font-size: var(--text-small);
+  color: var(--color-text-secondary);
+  font-style: italic;
 }
 
 .email {

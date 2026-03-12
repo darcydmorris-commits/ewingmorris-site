@@ -1,49 +1,85 @@
 import type { Metadata } from "next";
-import { PageHero } from "@/components/PageHero";
-import { SectionHeading } from "@/components/SectionHeading";
+import { Blockquote } from "@/components/Blockquote";
+import { CardElevated } from "@/components/CardElevated";
+import { Eyebrow } from "@/components/Eyebrow";
+import { NumberedList } from "@/components/NumberedList";
+import { PageHeader } from "@/components/PageHeader";
+import { ScrollReveal } from "@/components/ScrollReveal";
+import { SectionWrapper } from "@/components/SectionWrapper";
+import shared from "@/app/interior.module.css";
 
 export const metadata: Metadata = {
   title: "Activism & Special Situations",
-  description: "A differentiated capability focused on governance, incentives, structure, and long-term value creation.",
+  description: "Ewing Morris engages constructively in shareholder activism and special situations when governance, capital allocation, or strategy can be improved.",
 };
+
+const campaigns = [
+  ["BTB REIT", "$32.8M tender offer (2025). ~9.85% ownership at $4.10/unit. Oversubscribed. Board nomination in progress."],
+  ["Stoneridge (SRI)", "Active position. Ongoing engagement on capital allocation and operational performance."],
+  ["Parkland Corporation (PKI)", "Dissident slate. Subsequently acquired by Sunoco (2025)."],
+  ["ZCL Composites (TSX: ZCL)", "Board seat. Capital allocation and shareholder value."],
+  ["Cedar Realty Trust (NYSE: CDR)", "Board seat. Governance and strategic alternatives."],
+  ["Quisitive Technology (TSX: QUIS)", "Lead investor. Board seat. Growth strategy."],
+] as const;
+
+const approachItems = [
+  "We start private. The first call is always to management.",
+  "We do the work. Deep research, legal preparation, a clear thesis on what needs to change.",
+  "We go public when necessary. Proxy campaigns, press releases, director nominations.",
+  "We bring resources. Amy Freedman (former CEO, Kingsdale Advisors) advises on engagement strategy.",
+  "We stay engaged. Board seats, governance monitoring, sustained focus. This isn't a one-quarter trade.",
+];
 
 export default function ActivismPage() {
   return (
     <main>
-      <PageHero
+      <PageHeader
         eyebrow="Activism & Special Situations"
-        title="Selective where ownership can matter."
-        description="This capability is used where governance, incentives, capital structure, or strategic alternatives are central to the investment case. It is analytical work first, not posture."
+        title="When boards aren't serving shareholders, we show up."
+        lead="Shareholder activism is not a side project at Ewing Morris. It's a core capability that runs through our investment process. When we take a meaningful position in a company and believe governance, capital allocation, or strategy can be improved, we engage constructively and publicly."
       />
-      <section className="section-shell section-shell-alt mt-8 px-7 py-14 sm:px-10 lg:px-[4.5rem]">
-        <div className="grid gap-8 lg:grid-cols-[minmax(0,1.2fr)_minmax(260px,0.8fr)]">
-          <SectionHeading
-            eyebrow="Orientation"
-            title="Engaged when the facts justify it, restrained when they do not."
-            description="The firm's activism and special situations work reflects the same principles that guide the rest of the platform: careful underwriting, alignment of incentives, and a preference for substance over posture."
-          />
-          <aside className="border-l border-slate-800/10 pl-6">
-            <p className="font-sans-ui text-[0.72rem] uppercase tracking-[0.16em] text-amber-800">Differentiator</p>
-            <p className="mt-2 font-sans-ui text-base leading-7 text-slate-600">The edge is not aggression. It is comfort with complexity, structure, and the realities of ownership.</p>
-          </aside>
-        </div>
-      </section>
-      <section className="section-shell mt-8 px-7 py-14 sm:px-10 lg:px-[4.5rem]">
-        <SectionHeading eyebrow="What the capability includes" title="Governance, incentives, structure, and outcome pathways." />
-        <div className="grid gap-7 lg:grid-cols-3">
-          {[
-            ["Governance analysis", "Assessment of boards, incentives, capital allocation history, and shareholder alignment."],
-            ["Capital structure work", "Attention to how debt, equity, and strategic alternatives may affect the range of outcomes."],
-            ["Selective engagement", "Constructive involvement where there is a clear rationale, credible path, and disciplined understanding of risk."],
-          ].map(([title, copy], index) => (
-            <article key={title} className="border-t border-slate-800/10 pt-5">
-              <p className="font-sans-ui text-[0.72rem] uppercase tracking-[0.16em] text-amber-800">0{index + 1}</p>
-              <h3 className="mt-2 max-w-[18ch] text-[1.35rem] leading-[1.16] tracking-[-0.02em] text-slate-900">{title}</h3>
-              <p className="mt-2 font-sans-ui text-base leading-7 text-slate-600">{copy}</p>
-            </article>
-          ))}
-        </div>
-      </section>
+
+      <SectionWrapper narrow>
+        <ScrollReveal>
+          <p>We do this because it works-for our clients, for the companies involved, and for Canadian capital markets.</p>
+        </ScrollReveal>
+      </SectionWrapper>
+
+      <SectionWrapper muted>
+        <ScrollReveal>
+          <Eyebrow>Track record</Eyebrow>
+          <div className={shared.sectionIntro}>
+            <h2>Selected campaigns.</h2>
+          </div>
+          <div className={shared.cardsStack}>
+            {campaigns.map(([title, description]) => (
+              <CardElevated key={title}>
+                <h3>{title}</h3>
+                <p>{description}</p>
+              </CardElevated>
+            ))}
+          </div>
+        </ScrollReveal>
+      </SectionWrapper>
+
+      <SectionWrapper>
+        <ScrollReveal>
+          <Eyebrow>Approach</Eyebrow>
+          <div className={shared.sectionIntro}>
+            <h2>How we engage.</h2>
+          </div>
+          <NumberedList items={approachItems} />
+        </ScrollReveal>
+      </SectionWrapper>
+
+      <SectionWrapper dark>
+        <ScrollReveal>
+          <div className={shared.sectionIntro}>
+            <p>Most institutional investors in Canada are passive. They own the index, vote with management, and move on. That's a structural problem for Canadian capital markets. We think it's also an opportunity.</p>
+          </div>
+          <Blockquote quote="Activism is a public service disguised as an investment strategy." />
+        </ScrollReveal>
+      </SectionWrapper>
     </main>
   );
 }

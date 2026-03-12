@@ -1,0 +1,102 @@
+.twoColumn {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--space-xl);
+}
+
+.singleColumnCards {
+  display: grid;
+  gap: var(--space-md);
+}
+
+.sectionIntro {
+  display: grid;
+  gap: var(--space-md);
+}
+
+.sectionIntro p {
+  color: var(--color-text-secondary);
+}
+
+.teamGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--space-xl);
+}
+
+.contactGrid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(18rem, 22rem);
+  gap: var(--space-2xl);
+}
+
+.contactDetails {
+  display: grid;
+  gap: var(--space-sm);
+  align-content: start;
+}
+
+.contactLines {
+  display: grid;
+  gap: var(--space-md);
+}
+
+.subscribeForm {
+  display: grid;
+  gap: var(--space-md);
+  max-width: 28rem;
+}
+
+.subscribeInput {
+  width: 100%;
+  border: 1px solid var(--color-border);
+  background: var(--color-bg-elevated);
+  padding: 0.875rem 1rem;
+  color: var(--color-text);
+}
+
+.subscribeButton {
+  justify-self: start;
+  border: 0;
+  background: var(--color-heading);
+  color: var(--color-text-inverse);
+  padding: 0.875rem 2rem;
+  font-family: var(--font-sans);
+  font-size: var(--text-small);
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.subscribeButton:hover {
+  background: var(--color-accent);
+}
+
+.portalList {
+  display: grid;
+  gap: var(--space-sm);
+}
+
+.portalItem {
+  width: fit-content;
+  text-decoration: none;
+  border-bottom: 1px solid var(--color-border);
+  padding-bottom: 0.125rem;
+}
+
+.cardsStack > * + * {
+  margin-top: var(--space-md);
+}
+
+.boldParagraph {
+  font-weight: 500;
+  color: var(--color-heading);
+}
+
+@media (max-width: 767px) {
+  .twoColumn,
+  .teamGrid,
+  .contactGrid {
+    grid-template-columns: 1fr;
+  }
+}

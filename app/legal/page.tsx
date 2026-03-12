@@ -1,35 +1,41 @@
 import type { Metadata } from "next";
-import { PageHero } from "@/components/PageHero";
+import { PageHeader } from "@/components/PageHeader";
+import { ScrollReveal } from "@/components/ScrollReveal";
+import { SectionWrapper } from "@/components/SectionWrapper";
+import shared from "@/app/interior.module.css";
 
 export const metadata: Metadata = {
-  title: "Legal / Disclosures / Privacy",
-  description: "Legal, disclosure, and privacy information for the Ewing Morris website.",
+  title: "Legal & Regulatory",
+  description: "Legal and regulatory information for Ewing Morris, including investor portal links and public disclosures.",
 };
 
 export default function LegalPage() {
   return (
     <main>
-      <PageHero
-        eyebrow="Legal / Disclosures / Privacy"
-        title="Important information."
-        description="The information on this website is provided for general informational purposes only."
-      />
-      <section className="section-shell mt-8 px-7 py-14 sm:px-10 lg:px-[4.5rem]">
-        <div className="grid gap-10 lg:grid-cols-3">
-          <section className="space-y-3 border-t border-slate-800/10 pt-5">
-            <p className="font-sans-ui text-[0.72rem] uppercase tracking-[0.16em] text-amber-800">Legal</p>
-            <p className="font-sans-ui text-base leading-7 text-slate-600">This website does not constitute investment advice, an offer to sell, or a solicitation to buy any security or investment product.</p>
-          </section>
-          <section className="space-y-3 border-t border-slate-800/10 pt-5">
-            <p className="font-sans-ui text-[0.72rem] uppercase tracking-[0.16em] text-amber-800">Disclosures</p>
-            <p className="font-sans-ui text-base leading-7 text-slate-600">Any investment relationship with the firm is subject to applicable account opening, offering, and legal documentation, including information regarding eligibility, strategy terms, and risk considerations.</p>
-          </section>
-          <section className="space-y-3 border-t border-slate-800/10 pt-5">
-            <p className="font-sans-ui text-[0.72rem] uppercase tracking-[0.16em] text-amber-800">Privacy</p>
-            <p className="font-sans-ui text-base leading-7 text-slate-600">Privacy language should be reviewed and supplemented before public launch to reflect the firm&rsquo;s actual information-handling practices and applicable regulatory requirements.</p>
-          </section>
-        </div>
-      </section>
+      <PageHeader eyebrow="Legal" title="Legal & Regulatory" />
+
+      <SectionWrapper>
+        <ScrollReveal>
+          <div className={shared.sectionIntro}>
+            <h3>Investor Portal Logins</h3>
+          </div>
+          <div className={shared.portalList}>
+            <a className={shared.portalItem} href="https://portal.ewingmorris.com" target="_blank" rel="noreferrer">Ewing Morris Investor Portal</a>
+            <a className={shared.portalItem} href="https://f-engine.ndexsystems.com" target="_blank" rel="noreferrer">NDEX Client Login</a>
+            <a className={shared.portalItem} href="https://myportfolioplus.ca" target="_blank" rel="noreferrer">National Bank My Portfolio+</a>
+          </div>
+        </ScrollReveal>
+      </SectionWrapper>
+
+      <SectionWrapper muted narrow>
+        <ScrollReveal>
+          <div className={shared.sectionIntro}>
+            <p>Ewing Morris & Co. Investment Partners Ltd. is registered as a portfolio manager and exempt market dealer with the Ontario Securities Commission and other provincial regulators. The firm is also registered with the U.S. Securities and Exchange Commission as an investment adviser.</p>
+            <p>The information on this website is provided for general informational purposes only and does not constitute an offer to sell, or a solicitation of an offer to buy, any securities or investment products. Ewing Morris funds are available only to accredited investors who meet applicable suitability and sophistication requirements.</p>
+            <p>[Full regulatory disclosure, complaint resolution, and required notices - pending compliance review before launch.]</p>
+          </div>
+        </ScrollReveal>
+      </SectionWrapper>
     </main>
   );
 }
