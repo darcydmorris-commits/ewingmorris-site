@@ -17,8 +17,8 @@ export default function AboutPage() {
     <main>
       <PageHeader
         eyebrow="About"
-        title="Built on independent judgment and long-term alignment."
-        lead="Ewing Morris was founded on a simple idea: thoughtful capital allocation requires independence, patience, and the willingness to look where larger institutions often do not."
+        title="Built from $2 million and a shared conviction."
+        lead="In 2011, John Ewing and Darcy Morris left established careers to start an investment firm with $2 million, two lawn chairs, and a belief that the industry could be better. They read the Wall Street Journal at the public library. They took the bus from the airport on business trips. They built Ewing Morris one relationship at a time."
       />
 
       <SectionWrapper muted>

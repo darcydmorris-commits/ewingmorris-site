@@ -23,8 +23,8 @@ export default function WealthManagementPage() {
     <main>
       <PageHeader
         eyebrow="Wealth Management"
-        title="An extension of the family office."
-        lead="The work goes beyond portfolio management. It is about helping clients make better capital decisions across liquidity, opportunity, risk, and time."
+        title="Most wealth management is either a bank product or a sales pitch. We built something different."
+        lead="At a bank, your advisor is selling the house shelf. At most independents, wealth management is an afterthought bolted onto a fund business. At Ewing Morris, it's the relationship that holds everything together."
       />
 
       <SectionWrapper muted>
