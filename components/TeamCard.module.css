@@ -1,0 +1,48 @@
+.card {
+  display: grid;
+  gap: var(--space-sm);
+}
+
+.placeholder {
+  aspect-ratio: 1;
+  display: grid;
+  place-items: center;
+  background: var(--color-bg-muted);
+}
+
+.initials {
+  font-family: var(--font-serif);
+  font-size: var(--text-h2);
+  color: var(--color-heading);
+}
+
+.name {
+  margin-top: var(--space-sm);
+}
+
+.title {
+  font-size: var(--text-small);
+  color: var(--color-text-secondary);
+}
+
+.focus {
+  font-size: var(--text-small);
+  color: var(--color-text-tertiary);
+  font-style: italic;
+}
+
+.bio {
+  color: var(--color-text);
+}
+
+.email {
+  width: fit-content;
+  font-size: var(--text-small);
+  text-decoration: none;
+  border-bottom: 1px solid var(--color-border);
+  padding-bottom: 0.125rem;
+}
+
+.email:hover {
+  border-color: var(--color-accent);
+}

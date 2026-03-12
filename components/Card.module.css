@@ -1,0 +1,22 @@
+.card {
+  padding: var(--space-lg) 0;
+  border-top: 1px solid var(--color-border-subtle);
+}
+
+.number {
+  font-family: var(--font-sans);
+  font-size: var(--text-caption);
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-text-tertiary);
+}
+
+.title {
+  margin-top: var(--space-xs);
+}
+
+.description {
+  margin-top: var(--space-xs);
+  color: var(--color-text-secondary);
+}

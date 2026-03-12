@@ -1,21 +1,22 @@
 import type { Metadata, Viewport } from "next";
 import type { ReactNode } from "react";
+import { Footer } from "@/components/Footer";
+import { Nav } from "@/components/Nav";
+import { dmSans, garamond } from "@/lib/fonts";
 import "./globals.css";
-import { SiteFooter } from "@/components/SiteFooter";
-import { SiteHeader } from "@/components/SiteHeader";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://ewingmorris.com"),
   title: {
-    default: "Ewing Morris | Independent Investment Firm",
+    default: "Ewing Morris",
     template: "%s | Ewing Morris",
   },
   description:
-    "Independent investment firm serving affluent families, entrepreneurs, professionals, and select institutions with thoughtful wealth management and differentiated investment capabilities.",
+    "Independent, employee-owned investment firm based in Toronto, serving private wealth clients and select institutions.",
   openGraph: {
-    title: "Ewing Morris | Independent Investment Firm",
+    title: "Ewing Morris",
     description:
-      "Independent investment firm serving affluent families, entrepreneurs, professionals, and select institutions.",
+      "Independent, employee-owned investment firm based in Toronto, serving private wealth clients and select institutions.",
     url: "https://ewingmorris.com",
     siteName: "Ewing Morris",
     locale: "en_CA",
@@ -30,15 +31,11 @@ export const viewport: Viewport = {
 
 export default function RootLayout({ children }: Readonly<{ children: ReactNode }>) {
   return (
-    <html lang="en">
-      <body className="bg-stone-100 text-slate-900 antialiased">
-        <div className="min-h-screen bg-[radial-gradient(circle_at_top_left,rgba(180,145,100,0.14),transparent_22%),radial-gradient(circle_at_84%_14%,rgba(58,93,129,0.14),transparent_18%),linear-gradient(180deg,#f7f1e8_0%,#eee2d1_46%,#e7d8c2_100%)]">
-          <div className="mx-auto w-[min(1180px,calc(100vw-48px))] py-6 sm:py-8">
-            <SiteHeader />
-            {children}
-            <SiteFooter />
-          </div>
-        </div>
+    <html lang="en" className={`${garamond.variable} ${dmSans.variable}`}>
+      <body>
+        <Nav />
+        {children}
+        <Footer />
       </body>
     </html>
   );

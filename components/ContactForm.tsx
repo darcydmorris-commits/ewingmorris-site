@@ -1,54 +1,39 @@
-"use client";
+import styles from "./ContactForm.module.css";
 
 export function ContactForm() {
   return (
-    <form
-      className="grid gap-4 rounded-[24px] bg-white/10 p-7"
-      onSubmit={(event) => {
-        event.preventDefault();
-        const form = event.currentTarget;
-        const formData = new FormData(form);
-        const subject = encodeURIComponent("Private Consultation Request");
-        const body = encodeURIComponent(
-          [
-            `Name: ${formData.get("name") ?? ""}`,
-            `Email: ${formData.get("email") ?? ""}`,
-            `Investor Profile: ${formData.get("profile") ?? ""}`,
-            "",
-            "Discussion Notes:",
-            `${formData.get("message") ?? ""}`,
-          ].join("\n"),
-        );
-        window.location.href = `mailto:info@ewingmorris.com?subject=${subject}&body=${body}`;
-      }}
-    >
-      <label className="grid gap-2">
-        <span className="font-sans-ui text-sm tracking-[0.02em] text-stone-100">Name</span>
-        <input name="name" required className="font-sans-ui rounded-xl border border-white/15 bg-white/95 px-4 py-3 text-slate-900 outline-none" />
+    <form className={styles.form}>
+      <div className={styles.fieldGrid}>
+        <label className={styles.field}>
+          <span>Name</span>
+          <input type="text" name="name" autoComplete="name" />
+        </label>
+        <label className={styles.field}>
+          <span>Email</span>
+          <input type="email" name="email" autoComplete="email" />
+        </label>
+        <label className={styles.field}>
+          <span>Phone</span>
+          <input type="tel" name="phone" autoComplete="tel" />
+        </label>
+        <label className={styles.field}>
+          <span>Inquiry Type</span>
+          <select name="inquiryType" defaultValue="">
+            <option value="" disabled>Select one</option>
+            <option>Private Wealth</option>
+            <option>Fund Strategies</option>
+            <option>Institutional</option>
+            <option>Careers</option>
+            <option>Media</option>
+            <option>Other</option>
+          </select>
+        </label>
+      </div>
+      <label className={styles.field}>
+        <span>Message</span>
+        <textarea name="message" rows={6} />
       </label>
-      <label className="grid gap-2">
-        <span className="font-sans-ui text-sm tracking-[0.02em] text-stone-100">Email</span>
-        <input type="email" name="email" required className="font-sans-ui rounded-xl border border-white/15 bg-white/95 px-4 py-3 text-slate-900 outline-none" />
-      </label>
-      <label className="grid gap-2">
-        <span className="font-sans-ui text-sm tracking-[0.02em] text-stone-100">Investor Profile</span>
-        <select name="profile" required className="font-sans-ui rounded-xl border border-white/15 bg-white/95 px-4 py-3 text-slate-900 outline-none">
-          <option value="">Select one</option>
-          <option>Affluent Family</option>
-          <option>Entrepreneur or Founder</option>
-          <option>Professional</option>
-          <option>Institution or Allocator</option>
-          <option>Other Qualified Investor</option>
-        </select>
-      </label>
-      <label className="grid gap-2">
-        <span className="font-sans-ui text-sm tracking-[0.02em] text-stone-100">What would you like to discuss?</span>
-        <textarea name="message" rows={5} className="font-sans-ui min-h-32 rounded-xl border border-white/15 bg-white/95 px-4 py-3 text-slate-900 outline-none" placeholder="Tell us briefly about your priorities or questions." />
-      </label>
-      <button type="submit" className="font-sans-ui inline-flex min-h-11 items-center justify-center rounded-full border border-stone-100 bg-stone-100 px-5 text-[0.78rem] uppercase tracking-[0.09em] text-slate-900 transition hover:-translate-y-px hover:bg-white">
-        Request Consultation
-      </button>
-      <p className="font-sans-ui text-[0.78rem] uppercase tracking-[0.08em] text-stone-200/80">Submitting opens a private email addressed to the firm with your details included.</p>
+      <button type="submit" className={styles.submit}>Request a Private Consultation</button>
     </form>
   );
 }

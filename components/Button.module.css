@@ -1,0 +1,34 @@
+.primary,
+.link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-sans);
+  font-size: var(--text-small);
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.primary {
+  padding: 0.875rem 2rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  background: var(--color-heading);
+  color: var(--color-text-inverse);
+}
+
+.primary:hover {
+  background: var(--color-accent);
+  color: var(--color-text-inverse);
+}
+
+.link {
+  letter-spacing: 0.04em;
+  color: var(--color-heading);
+  border-bottom: 1px solid var(--color-border);
+  padding-bottom: 0.125rem;
+}
+
+.link:hover {
+  border-color: var(--color-accent);
+}

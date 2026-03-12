@@ -1,0 +1,23 @@
+.figure {
+  margin: 0;
+}
+
+.quote {
+  font-family: var(--font-serif);
+  font-size: var(--text-h3);
+  font-weight: 400;
+  font-style: italic;
+  line-height: var(--leading-heading);
+  color: inherit;
+  border-left: 2px solid var(--color-accent);
+  padding-left: var(--space-lg);
+  max-width: var(--content-narrow);
+}
+
+.attribution {
+  margin-top: var(--space-sm);
+  padding-left: calc(var(--space-lg) + 2px);
+  font-family: var(--font-sans);
+  font-size: var(--text-small);
+  color: var(--color-text-tertiary);
+}

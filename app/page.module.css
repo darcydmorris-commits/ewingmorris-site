@@ -1,0 +1,144 @@
+.hero {
+  min-height: 85vh;
+  display: flex;
+  align-items: center;
+  padding-top: calc(4.5rem + var(--space-3xl));
+  padding-bottom: var(--space-2xl);
+}
+
+.heroInner {
+  max-width: 52rem;
+}
+
+.display {
+  max-width: 16ch;
+  font-size: var(--text-display);
+  line-height: var(--leading-tight);
+  letter-spacing: 0.01em;
+}
+
+.lead,
+.secondaryLead {
+  font-size: var(--text-body-lg);
+  color: var(--color-text-secondary);
+}
+
+.lead {
+  margin-top: var(--space-lg);
+}
+
+.secondaryLead {
+  margin-top: var(--space-md);
+}
+
+.heroActions {
+  margin-top: var(--space-lg);
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-md);
+}
+
+.pathsGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--space-xl);
+}
+
+.pathColumn {
+  display: grid;
+  gap: var(--space-md);
+}
+
+.pathTitle {
+  font-family: var(--font-sans);
+  font-size: var(--text-h3);
+  font-weight: 500;
+}
+
+.pathBody {
+  color: var(--color-text-secondary);
+}
+
+.statsGrid {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  border-top: 1px solid var(--color-border);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.statItem {
+  padding: var(--space-md) var(--space-sm);
+  border-right: 1px solid var(--color-border);
+}
+
+.statItem:last-child {
+  border-right: 0;
+}
+
+.statLabel {
+  font-family: var(--font-sans);
+  font-size: var(--text-caption);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--color-text-tertiary);
+}
+
+.statValue {
+  margin-top: var(--space-xs);
+  font-size: var(--text-h3);
+}
+
+.sectionIntro {
+  display: grid;
+  gap: var(--space-md);
+}
+
+.sectionIntro p {
+  color: var(--color-text-secondary);
+}
+
+.insightsPlaceholder {
+  margin-top: var(--space-xl);
+}
+
+.placeholderText {
+  font-family: var(--font-sans);
+  font-size: var(--text-body);
+  color: var(--color-text-secondary);
+}
+
+.sectionAction,
+.darkAction {
+  margin-top: var(--space-lg);
+}
+
+.darkAction :global(a) {
+  color: var(--color-text-inverse);
+  border-bottom-color: rgba(243, 241, 236, 0.3);
+}
+
+.darkAction :global(a:hover) {
+  border-bottom-color: var(--color-accent);
+}
+
+@media (max-width: 1023px) {
+  .statsGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .statItem:nth-child(2n) {
+    border-right: 0;
+  }
+}
+
+@media (max-width: 767px) {
+  .hero {
+    min-height: auto;
+    padding-top: calc(4.5rem + var(--space-2xl));
+  }
+
+  .pathsGrid {
+    grid-template-columns: 1fr;
+  }
+}

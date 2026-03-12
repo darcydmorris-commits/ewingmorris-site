@@ -1,0 +1,31 @@
+.section {
+  padding: var(--section-pad) 0;
+}
+
+.muted {
+  background: var(--color-bg-muted);
+}
+
+.dark {
+  background: var(--color-bg-deep);
+  color: var(--color-text-inverse);
+}
+
+.dark :global(h1),
+.dark :global(h2),
+.dark :global(h3) {
+  color: var(--color-text-inverse);
+}
+
+.dark :global(p),
+.dark :global(li) {
+  color: rgba(243, 241, 236, 0.72);
+}
+
+.dark :global(figcaption) {
+  color: rgba(243, 241, 236, 0.45);
+}
+
+.dark :global([class*="eyebrow"]) {
+  color: rgba(243, 241, 236, 0.45);
+}
