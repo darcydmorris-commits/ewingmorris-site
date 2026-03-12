@@ -23,6 +23,7 @@
 .brand {
   display: inline-flex;
   align-items: center;
+  margin-right: 2rem;
   text-decoration: none;
   color: var(--color-heading);
 }
@@ -32,7 +33,7 @@
 }
 
 .wordmarkImage {
-  margin-left: 10px;
+  margin-left: 12px;
 }
 
 .desktopNav {
@@ -155,6 +156,10 @@
 @media (max-width: 1023px) {
   .inner {
     grid-template-columns: auto 1fr auto;
+  }
+
+  .brand {
+    margin-right: 0;
   }
 
   .desktopNav,

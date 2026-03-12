@@ -51,7 +51,7 @@ export function Nav() {
         <div className={`${styles.inner} container`}>
           <Link href="/" className={styles.brand} aria-label="Ewing Morris home" onClick={() => setOpen(false)}>
             <Image src="/monogram.png" alt="Ewing Morris monogram" width={32} height={32} style={{ height: "32px", width: "auto" }} priority />
-            <Image src="/logo.png" alt="Ewing Morris" width={200} height={20} style={{ height: "20px", width: "auto" }} priority className={styles.wordmarkImage} />
+            <Image src="/logo.png" alt="Ewing Morris" width={200} height={24} style={{ height: "24px", width: "auto" }} priority className={styles.wordmarkImage} />
           </Link>
 
           <nav className={styles.desktopNav} aria-label="Primary">
