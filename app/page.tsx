@@ -43,17 +43,22 @@ export default function HomePage() {
       <section className={styles.hero}>
         <div className="container">
           <ScrollReveal className={styles.heroInner}>
-            <Eyebrow>Independent investment firm</Eyebrow>
-            <h1 className={styles.display}>&quot;Doing what others can&apos;t or won&apos;t.&quot;</h1>
-            <p className={styles.lead}>
-              Ewing Morris is an independent, employee-owned investment firm based in Toronto. We manage close to $1 billion for more than 500 families and select institutions, applying a private equity mindset to public markets, credit, and select real assets.
-            </p>
-            <p className={styles.secondaryLead}>
+            <div className={styles.heroGrid}>
+              <h1 className={styles.heroHeadline}>
+                Invest
+                <br />
+                <span className={styles.heroHeadlineItalic}>with Ewing Morris</span>
+              </h1>
+              <p className={styles.heroLead}>
+                Ewing Morris is an independent, employee-owned investment firm based in Toronto. We manage close to $1 billion for more than 500 families and select institutions, applying a private equity mindset to public markets, credit, and select real assets.
+              </p>
+            </div>
+            <p className={styles.heroSecondary}>
               Founded in 2011 by John Ewing and Darcy Morris with $2 million and a shared conviction: the best investment firm is one we&apos;d want to be clients of.
             </p>
             <div className={styles.heroActions}>
-              <Button href="/contact">Start a conversation</Button>
-              <Button href="/strategies" variant="link">How we invest</Button>
+              <a href="/contact" className={styles.heroPrimaryCta}>Start a conversation</a>
+              <a href="/strategies" className={styles.heroSecondaryCta}>How we invest</a>
             </div>
           </ScrollReveal>
         </div>

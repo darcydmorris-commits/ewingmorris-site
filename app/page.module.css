@@ -1,37 +1,47 @@
 .hero {
+  background: var(--color-bg-deep);
   min-height: 85vh;
   display: flex;
   align-items: center;
-  padding-top: calc(4.5rem + var(--space-3xl));
-  padding-bottom: var(--space-2xl);
+  padding: var(--section-pad) 0;
 }
 
 .heroInner {
-  max-width: 52rem;
+  width: 100%;
 }
 
-.display {
+.heroGrid {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: var(--space-2xl);
+  align-items: end;
+}
+
+.heroHeadline {
   max-width: 16ch;
-  font-family: var(--font-sans);
+  font-family: var(--font-serif);
   font-size: var(--text-display);
-  font-weight: 500;
+  font-weight: 400;
   line-height: var(--leading-tight);
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
+  color: #ffffff;
 }
 
-.lead,
-.secondaryLead {
-  font-size: var(--text-body-lg);
-  color: var(--color-text-secondary);
+.heroHeadlineItalic {
+  font-style: italic;
 }
 
-.lead {
-  margin-top: var(--space-lg);
+.heroLead {
+  font-family: var(--font-sans);
+  font-size: var(--text-body);
+  line-height: var(--leading-body);
+  color: rgba(255, 255, 255, 0.6);
+  max-width: 28rem;
 }
 
-.secondaryLead {
-  margin-top: var(--space-md);
+.heroSecondary {
+  font-size: var(--text-body);
+  color: rgba(255, 255, 255, 0.5);
+  margin-top: var(--space-xl);
 }
 
 .heroActions {
@@ -39,6 +49,40 @@
   display: flex;
   flex-wrap: wrap;
   gap: var(--space-md);
+}
+
+.heroPrimaryCta,
+.heroSecondaryCta {
+  display: inline-flex;
+  align-items: center;
+  font-family: var(--font-sans);
+  font-size: var(--text-small);
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.heroPrimaryCta {
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  color: #ffffff;
+  padding: 0.875rem 2rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.heroPrimaryCta:hover {
+  background: #ffffff;
+  color: var(--color-bg-deep);
+}
+
+.heroSecondaryCta {
+  color: rgba(255, 255, 255, 0.6);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.7);
+  padding-bottom: 0.125rem;
+}
+
+.heroSecondaryCta:hover {
+  color: #ffffff;
+  border-bottom-color: #ffffff;
 }
 
 .pathsGrid {
@@ -137,12 +181,13 @@
   }
 }
 
-@media (max-width: 767px) {
-  .hero {
-    min-height: auto;
-    padding-top: calc(4.5rem + var(--space-2xl));
+@media (max-width: 768px) {
+  .heroGrid {
+    grid-template-columns: 1fr;
   }
+}
 
+@media (max-width: 767px) {
   .pathsGrid {
     grid-template-columns: 1fr;
   }
