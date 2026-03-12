@@ -1,0 +1,49 @@
+@import "tailwindcss";
+
+:root {
+  --background: #f7f1e8;
+  --foreground: #17314b;
+  --muted: #5e7081;
+  --faint: #7a8a97;
+  --accent: #9e7a53;
+  --line: rgba(23, 49, 75, 0.1);
+  --surface: rgba(255, 251, 246, 0.72);
+  --surface-alt: rgba(247, 239, 228, 0.9);
+  --surface-deep: #1c3b58;
+}
+
+body {
+  background: transparent;
+  color: var(--foreground);
+  font-family: Georgia, "Times New Roman", serif;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background:
+    linear-gradient(rgba(255, 255, 255, 0.16) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.16) 1px, transparent 1px);
+  background-size: 72px 72px;
+  opacity: 0.18;
+  mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.48), transparent 82%);
+}
+
+.font-sans-ui {
+  font-family: Aptos, "Segoe UI", sans-serif;
+}
+
+.section-shell {
+  @apply mt-8 rounded-[30px] border border-white/60 shadow-[0_24px_56px_rgba(30,45,62,0.09)];
+  background: linear-gradient(180deg, rgba(255, 251, 246, 0.72), rgba(245, 237, 226, 0.88));
+}
+
+.section-shell-alt {
+  background: linear-gradient(180deg, rgba(250, 245, 238, 0.78), rgba(239, 229, 215, 0.9));
+}
+
+.text-balance {
+  text-wrap: balance;
+}
