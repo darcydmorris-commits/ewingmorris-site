@@ -32,7 +32,16 @@
   color: var(--color-heading);
 }
 
-.wordmarkImage {
+.monogram {
+  height: 32px;
+  width: auto;
+  display: block;
+}
+
+.wordmark {
+  height: 16px;
+  width: auto;
+  display: block;
   margin-left: 12px;
 }
 
