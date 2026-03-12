@@ -48,8 +48,7 @@ export function Nav() {
     <>
       <header className={`${styles.nav} ${scrolled ? styles.scrolled : ""}`}>
         <div className={`${styles.inner} container`}>
-          <Link href="/" className={styles.brand} aria-label="Ewing Morris home" onClick={() => setOpen(false)}>
-            <img src="/monogram.png" alt="" className={styles.monogram} />
+          <Link href="/" className={styles.navLogo} aria-label="Ewing Morris home" onClick={() => setOpen(false)}>
             <img src="/logo.png" alt="Ewing Morris" className={styles.wordmark} />
           </Link>
 
