@@ -12,9 +12,12 @@
 
 .display {
   max-width: 16ch;
+  font-family: var(--font-sans);
   font-size: var(--text-display);
+  font-weight: 500;
   line-height: var(--leading-tight);
-  letter-spacing: 0.01em;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
 }
 
 .lead,
