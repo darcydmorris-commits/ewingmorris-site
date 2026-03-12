@@ -25,12 +25,12 @@ const capabilityCopy: Record<string, { summary: string; detail: string }> = {
       "The role of fixed income is considered in context: resilience, liquidity, and how it supports the broader portfolio.",
   },
   "activism-special-situations": {
-    summary: "In selected situations, governance, capital structure, or strategic change can shape the outcome as much as the market's first impression.",
+    summary: "In selected situations, governance, capital structure, or strategic change can shape the outcome as much as the market&rsquo;s first impression.",
     detail:
       "The approach is constructive, selective, and grounded in deep work rather than noise.",
   },
   "wealth-management": {
-    summary: "Wealth management is handled with the same seriousness as the firm's investment work.",
+    summary: "Wealth management is handled with the same seriousness as the firm&rsquo;s investment work.",
     detail:
       "That means thinking across taxes, liquidity, concentration, manager selection, and family priorities rather than treating each decision on its own.",
   },
@@ -116,7 +116,7 @@ export default function HomePage() {
           <aside className="border-l border-slate-800/10 pl-6">
             <p className="font-sans-ui text-[0.72rem] uppercase tracking-[0.16em] text-amber-800">Working principle</p>
             <blockquote className="mt-2 text-[1.8rem] leading-[1.12] tracking-[-0.03em] text-slate-900">
-              Good counsel should make a family's balance sheet simpler, steadier, and easier to act on.
+              Good counsel should make a family&rsquo;s balance sheet simpler, steadier, and easier to act on.
             </blockquote>
           </aside>
         </div>
@@ -156,7 +156,7 @@ export default function HomePage() {
           <SectionHeading
             eyebrow="Insights"
             title="A visible point of view."
-            description="The firm's letters and commentary are an extension of how it works: measured, specific, and more interested in clarity than performance."
+            description="The firm&rsquo;s letters and commentary are an extension of how it works: measured, specific, and more interested in clarity than performance."
           />
           <div className="grid gap-7 md:grid-cols-2">
             {insights.slice(0, 2).map((insight) => (

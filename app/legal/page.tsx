@@ -26,7 +26,7 @@ export default function LegalPage() {
           </section>
           <section className="space-y-3 border-t border-slate-800/10 pt-5">
             <p className="font-sans-ui text-[0.72rem] uppercase tracking-[0.16em] text-amber-800">Privacy</p>
-            <p className="font-sans-ui text-base leading-7 text-slate-600">Privacy language should be reviewed and supplemented before public launch to reflect the firm's actual information-handling practices and applicable regulatory requirements.</p>
+            <p className="font-sans-ui text-base leading-7 text-slate-600">Privacy language should be reviewed and supplemented before public launch to reflect the firm&rsquo;s actual information-handling practices and applicable regulatory requirements.</p>
           </section>
         </div>
       </section>
