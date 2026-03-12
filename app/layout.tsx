@@ -13,6 +13,10 @@ export const metadata: Metadata = {
   },
   description:
     "Independent, employee-owned investment firm based in Toronto, serving private wealth clients and select institutions.",
+  icons: {
+    icon: "/favicon.png",
+    apple: "/favicon.png",
+  },
   openGraph: {
     title: "Ewing Morris",
     description:

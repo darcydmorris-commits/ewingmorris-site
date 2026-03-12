@@ -19,18 +19,18 @@
   max-width: 30rem;
 }
 
-.brandName {
-  font-family: var(--font-sans);
-  font-size: var(--text-body);
-  font-weight: 500;
-  color: rgba(243, 241, 236, 0.85);
-}
-
 .description {
   margin-top: var(--space-sm);
   font-family: var(--font-serif);
   font-size: var(--text-body);
   color: rgba(243, 241, 236, 0.7);
+}
+
+.location {
+  margin-top: var(--space-sm);
+  font-family: var(--font-sans);
+  font-size: var(--text-small);
+  color: rgba(243, 241, 236, 0.45);
 }
 
 .nav {

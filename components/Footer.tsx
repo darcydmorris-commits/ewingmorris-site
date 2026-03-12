@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import styles from "./Footer.module.css";
 
@@ -16,10 +17,11 @@ export function Footer() {
       <div className={`${styles.inner} container`}>
         <div className={styles.top}>
           <div className={styles.brandBlock}>
-            <p className={styles.brandName}>Ewing Morris</p>
+            <Image src="/logo-white.png" alt="Ewing Morris" width={220} height={22} style={{ height: "22px", width: "auto" }} priority />
             <p className={styles.description}>
               Independent investment firm serving affluent families, entrepreneurs, professionals, and select institutions.
             </p>
+            <p className={styles.location}>Toronto, Ontario, Canada</p>
           </div>
           <nav className={styles.nav} aria-label="Footer">
             {footerLinks.map((link) => (

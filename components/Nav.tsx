@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import styles from "./Nav.module.css";
@@ -49,8 +50,8 @@ export function Nav() {
       <header className={`${styles.nav} ${scrolled ? styles.scrolled : ""}`}>
         <div className={`${styles.inner} container`}>
           <Link href="/" className={styles.brand} aria-label="Ewing Morris home" onClick={() => setOpen(false)}>
-            <span className={styles.mark}>EM</span>
-            <span className={styles.wordmark}>Ewing Morris</span>
+            <Image src="/monogram.png" alt="Ewing Morris monogram" width={32} height={32} style={{ height: "32px", width: "auto" }} priority />
+            <Image src="/logo.png" alt="Ewing Morris" width={200} height={20} style={{ height: "20px", width: "auto" }} priority className={styles.wordmarkImage} />
           </Link>
 
           <nav className={styles.desktopNav} aria-label="Primary">
