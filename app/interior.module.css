@@ -93,10 +93,36 @@
   color: var(--color-heading);
 }
 
+.timelineItem {
+  display: grid;
+  grid-template-columns: 5rem minmax(0, 1fr);
+  gap: var(--space-lg);
+  padding: var(--space-lg) 0;
+  border-top: 1px solid var(--color-border-subtle);
+}
+
+.timelineItem:last-child {
+  border-bottom: 1px solid var(--color-border-subtle);
+}
+
+.timelineYear {
+  font-family: var(--font-sans);
+  font-size: var(--text-caption);
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-text-tertiary);
+}
+
+.timelineText {
+  color: var(--color-text);
+}
+
 @media (max-width: 767px) {
   .twoColumn,
   .teamGrid,
-  .contactGrid {
+  .contactGrid,
+  .timelineItem {
     grid-template-columns: 1fr;
   }
 }
