@@ -56,7 +56,7 @@ export default function StrategiesPage() {
 
             <div className={styles.frameworkSupport}>
               <p>
-                Wealth is the relationship layer. Capital allocation is the core work. The investment domains are tools applied according to the needs of the balance sheet.
+                Wealth is the relationship layer. Capital allocation is the core work. The investment domains are tools applied according to each client's balance sheet.
               </p>
             </div>
           </div>
