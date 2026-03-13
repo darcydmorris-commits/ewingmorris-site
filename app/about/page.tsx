@@ -6,6 +6,7 @@ import { PageHeader } from "@/components/PageHeader";
 import { ScrollReveal } from "@/components/ScrollReveal";
 import { SectionWrapper } from "@/components/SectionWrapper";
 import shared from "@/app/interior.module.css";
+import styles from "./about.module.css";
 
 export const metadata: Metadata = {
   title: "About",
@@ -51,9 +52,11 @@ export default function AboutPage() {
 
       <SectionWrapper muted>
         <ScrollReveal>
-          <Blockquote quote="Our aim is to create an investment firm we would want to be clients of." />
-          <div className={shared.sectionIntro}>
-            <p>This means focusing on investment results, not asset-gathering. Communicating candidly whether the news is good or bad. Investing our own capital alongside our clients on the same terms. And measuring ourselves by absolute returns, not relative benchmarks.</p>
+          <div className={styles.quoteSection}>
+            <Blockquote quote="Our aim is to create an investment firm we would want to be clients of." />
+            <div className={`${shared.sectionIntro} ${styles.quoteSupport}`}>
+              <p>This means focusing on investment results, not asset-gathering. Communicating candidly whether the news is good or bad. Investing our own capital alongside our clients on the same terms. And measuring ourselves by absolute returns, not relative benchmarks.</p>
+            </div>
           </div>
         </ScrollReveal>
       </SectionWrapper>
