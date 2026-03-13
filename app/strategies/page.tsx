@@ -46,31 +46,30 @@ export default function StrategiesPage() {
             <p>A wealth-centered approach to capital allocation across multiple investment domains.</p>
           </div>
 
-          <div className={styles.frameworkPlate}>
-            <div className={styles.frameworkClientsBand}>
-              <div className={styles.clientModule}>Clients</div>
-            </div>
+          <div className={styles.frameworkWrap}>
+            <p className={styles.clientLabel}>Clients</p>
+            <div className={styles.frameworkPlate}>
+              <div className={styles.frameworkCoreBand}>
+                <div className={styles.wealthModule}>Ewing Morris Wealth</div>
+                <div className={styles.allocationModule}>Capital Allocation</div>
+              </div>
 
-            <div className={styles.frameworkCoreBand}>
-              <div className={styles.wealthModule}>Ewing Morris Wealth</div>
-              <div className={styles.allocationModule}>Capital Allocation</div>
-            </div>
-
-            <div className={styles.frameworkDomainsBand}>
-              <p className={styles.frameworkLabel}>Investment Domains</p>
-              <div className={styles.domainGrid}>
-                {architectureDomains.map((domain) => (
-                  <div key={domain} className={styles.domainModule}>
-                    {domain}
-                  </div>
-                ))}
+              <div className={styles.frameworkDomainsBand}>
+                <p className={styles.frameworkLabel}>Investment Domains</p>
+                <div className={styles.domainGrid}>
+                  {architectureDomains.map((domain) => (
+                    <div key={domain} className={styles.domainModule}>
+                      {domain}
+                    </div>
+                  ))}
+                </div>
               </div>
             </div>
           </div>
 
           <div className={styles.frameworkSupport}>
             <p>
-              Clients hire the firm through Wealth relationships. Capital allocation is the core work of the firm. The investment domains are tools used according to the needs of the balance sheet.
+              Wealth is the relationship layer. Capital allocation is the core work. The investment domains are tools applied according to the needs of the balance sheet.
             </p>
           </div>
         </ScrollReveal>

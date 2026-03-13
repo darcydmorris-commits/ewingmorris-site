@@ -7,29 +7,36 @@
   max-width: 40em;
 }
 
+.frameworkWrap {
+  width: min(100% + var(--space-2xl), var(--content-wide));
+  margin: var(--space-2xl) auto 0;
+}
+
+.clientLabel {
+  margin-bottom: var(--space-sm);
+  font-family: var(--font-sans);
+  font-size: var(--text-caption);
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-text-tertiary);
+  text-align: center;
+}
+
 .frameworkPlate {
-  margin-top: var(--space-2xl);
   border: 1px solid var(--color-border-subtle);
   background: var(--color-bg-elevated);
 }
 
-.frameworkClientsBand,
 .frameworkCoreBand,
 .frameworkDomainsBand {
-  padding: var(--space-lg);
+  padding: var(--space-xl);
 }
 
-.frameworkCoreBand,
 .frameworkDomainsBand {
   border-top: 1px solid var(--color-border-subtle);
 }
 
-.frameworkClientsBand {
-  display: flex;
-  justify-content: center;
-}
-
-.clientModule,
 .wealthModule,
 .allocationModule,
 .domainModule {
@@ -38,7 +45,6 @@
   transition: border-color 0.2s ease, color 0.2s ease;
 }
 
-.clientModule:hover,
 .wealthModule:hover,
 .allocationModule:hover,
 .domainModule:hover {
@@ -46,22 +52,10 @@
   color: var(--color-accent);
 }
 
-.clientModule {
-  min-width: 10rem;
-  padding: 0.75rem var(--space-lg);
-  font-family: var(--font-sans);
-  font-size: var(--text-caption);
-  font-weight: 500;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  text-align: center;
-  color: var(--color-text-secondary);
-}
-
 .frameworkCoreBand {
   display: grid;
   gap: var(--space-md);
-  max-width: 56rem;
+  max-width: 62rem;
   margin: 0 auto;
 }
 
@@ -69,10 +63,10 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 8rem;
-  padding: var(--space-lg);
+  min-height: 8.5rem;
+  padding: var(--space-xl);
   font-family: var(--font-serif);
-  font-size: clamp(2.15rem, 3vw, 2.85rem);
+  font-size: clamp(2.2rem, 3.2vw, 3rem);
   font-weight: 400;
   text-align: center;
   color: var(--color-heading);
@@ -83,13 +77,13 @@
   align-items: center;
   justify-content: center;
   min-height: 4.75rem;
-  max-width: 32rem;
+  max-width: 30rem;
   margin: 0 auto;
   padding: var(--space-md) var(--space-lg);
   font-family: var(--font-sans);
   font-size: var(--text-body-lg);
   font-weight: 600;
-  letter-spacing: 0.04em;
+  letter-spacing: 0.05em;
   text-transform: uppercase;
   text-align: center;
   color: var(--color-heading);
@@ -102,6 +96,7 @@
   letter-spacing: 0.12em;
   text-transform: uppercase;
   color: var(--color-text-tertiary);
+  text-align: center;
 }
 
 .domainGrid {
@@ -112,7 +107,7 @@
 }
 
 .domainModule {
-  min-height: 6rem;
+  min-height: 6.25rem;
   padding: var(--space-md);
   display: flex;
   align-items: center;
@@ -139,13 +134,16 @@
 }
 
 @media (max-width: 1023px) {
+  .frameworkWrap {
+    width: 100%;
+  }
+
   .domainGrid {
     grid-template-columns: 1fr 1fr;
   }
 }
 
 @media (max-width: 767px) {
-  .frameworkClientsBand,
   .frameworkCoreBand,
   .frameworkDomainsBand {
     padding: var(--space-md);
@@ -153,6 +151,7 @@
 
   .wealthModule {
     min-height: 6.5rem;
+    padding: var(--space-lg);
     font-size: var(--text-h3);
   }
 
