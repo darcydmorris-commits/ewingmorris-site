@@ -44,24 +44,25 @@ export default function StrategiesPage() {
           <div className={`${shared.sectionIntro} ${styles.architectureIntro}`}>
             <h2>The Ewing Morris Endowment Model</h2>
             <p>
-              A wealth-centered approach to capital allocation that combines public markets, engagement, credit, and special situations.
+              A wealth-centered approach to capital allocation across multiple investment domains.
             </p>
             <p>
-              Wealth is the relationship layer. Capital allocation is the core work. The return engines below are expressions of the same philosophy, used where they are most useful to the balance sheet.
+              Wealth is the relationship layer. Capital allocation is the core work. The investment domains below are tools within the same philosophy, used where they are most useful to the balance sheet.
             </p>
           </div>
-          <div className={styles.platformDiagram}>
-            <div className={styles.platformNode}>Clients</div>
-            <div className={styles.platformConnector} aria-hidden="true" />
-            <div className={`${styles.platformNode} ${styles.platformHub}`}>Ewing Morris Wealth</div>
-            <div className={styles.platformConnector} aria-hidden="true" />
-            <div className={`${styles.platformNode} ${styles.platformCore}`}>Capital Allocation</div>
-            <div className={styles.platformConnector} aria-hidden="true" />
-            <div className={styles.platformDomainLayer}>
-              <p className={styles.platformLabel}>Return Engines</p>
-              <div className={styles.platformDomains}>
+          <div className={styles.frameworkPlate}>
+            <div className={styles.frameworkLevelTop}>
+              <div className={styles.clientModule}>Clients</div>
+            </div>
+            <div className={styles.frameworkLevelCore}>
+              <div className={styles.wealthModule}>Ewing Morris Wealth</div>
+              <div className={styles.allocationModule}>Capital Allocation</div>
+            </div>
+            <div className={styles.frameworkLevelBottom}>
+              <p className={styles.frameworkLabel}>Investment Domains</p>
+              <div className={styles.domainGrid}>
                 {architectureDomains.map((domain) => (
-                  <div key={domain} className={styles.platformDomain}>
+                  <div key={domain} className={styles.domainModule}>
                     {domain}
                   </div>
                 ))}

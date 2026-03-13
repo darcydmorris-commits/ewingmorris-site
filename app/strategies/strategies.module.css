@@ -7,63 +7,91 @@
   max-width: 40em;
 }
 
-.platformDiagram {
-  display: grid;
-  gap: var(--space-md);
+.frameworkPlate {
   margin-top: var(--space-2xl);
+  border: 1px solid var(--color-border-subtle);
+  background: var(--color-bg-elevated);
 }
 
-.platformNode,
-.platformDomain {
+.frameworkLevelTop,
+.frameworkLevelCore,
+.frameworkLevelBottom {
+  padding: var(--space-lg);
+}
+
+.frameworkLevelCore,
+.frameworkLevelBottom {
+  border-top: 1px solid var(--color-border-subtle);
+}
+
+.frameworkLevelTop {
+  display: flex;
+  justify-content: center;
+}
+
+.clientModule,
+.wealthModule,
+.allocationModule,
+.domainModule {
   border: 1px solid var(--color-border-subtle);
-  padding: var(--space-md) var(--space-lg);
-  font-family: var(--font-sans);
-  font-size: var(--text-small);
-  font-weight: 500;
-  letter-spacing: 0.04em;
-  color: var(--color-heading);
   background: var(--color-bg-elevated);
   transition: border-color 0.2s ease, color 0.2s ease;
 }
 
-.platformNode:hover,
-.platformDomain:hover {
+.clientModule:hover,
+.wealthModule:hover,
+.allocationModule:hover,
+.domainModule:hover {
   border-color: var(--color-accent);
   color: var(--color-accent);
 }
 
-.platformHub {
-  font-family: var(--font-serif);
-  font-size: var(--text-h3);
-  font-weight: 400;
-  letter-spacing: 0;
-  padding-top: var(--space-lg);
-  padding-bottom: var(--space-lg);
+.clientModule {
+  min-width: 12rem;
+  padding: var(--space-sm) var(--space-lg);
+  font-family: var(--font-sans);
+  font-size: var(--text-small);
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  text-align: center;
+  color: var(--color-heading);
 }
 
-.platformCore {
+.frameworkLevelCore {
+  display: grid;
+  grid-template-columns: minmax(0, 1.25fr) minmax(16rem, 0.9fr);
+  gap: var(--space-md);
+  align-items: stretch;
+}
+
+.wealthModule {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 7.5rem;
+  padding: var(--space-lg);
+  font-family: var(--font-serif);
+  font-size: var(--text-h2);
+  font-weight: 400;
+  text-align: center;
+  color: var(--color-heading);
+}
+
+.allocationModule {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 7.5rem;
+  padding: var(--space-lg);
   font-family: var(--font-sans);
   font-size: var(--text-body-lg);
   font-weight: 600;
   letter-spacing: 0.03em;
-  padding-top: var(--space-md);
-  padding-bottom: var(--space-md);
+  text-align: center;
+  color: var(--color-heading);
 }
 
-.platformConnector {
-  width: 1px;
-  height: 2rem;
-  margin-left: calc(var(--space-lg) + 1px);
-  background: rgba(27, 31, 35, 0.22);
-}
-
-.platformDomainLayer {
-  display: grid;
-  gap: var(--space-md);
-  padding-top: var(--space-sm);
-}
-
-.platformLabel {
+.frameworkLabel {
   font-family: var(--font-sans);
   font-size: var(--text-caption);
   font-weight: 500;
@@ -72,10 +100,25 @@
   color: var(--color-text-tertiary);
 }
 
-.platformDomains {
+.domainGrid {
   display: grid;
   grid-template-columns: repeat(5, minmax(0, 1fr));
   gap: var(--space-sm);
+  margin-top: var(--space-md);
+}
+
+.domainModule {
+  min-height: 6.5rem;
+  padding: var(--space-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-sans);
+  font-size: var(--text-small);
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  text-align: center;
+  color: var(--color-heading);
 }
 
 .fitSection {
@@ -83,7 +126,38 @@
 }
 
 @media (max-width: 1023px) {
-  .platformDomains {
+  .frameworkLevelCore {
+    grid-template-columns: 1fr;
+  }
+
+  .domainGrid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 767px) {
+  .frameworkLevelTop,
+  .frameworkLevelCore,
+  .frameworkLevelBottom {
+    padding: var(--space-md);
+  }
+
+  .clientModule,
+  .wealthModule,
+  .allocationModule,
+  .domainModule {
+    min-height: auto;
+  }
+
+  .wealthModule {
+    font-size: var(--text-h3);
+  }
+
+  .allocationModule {
+    font-size: var(--text-body);
+  }
+
+  .domainGrid {
     grid-template-columns: 1fr;
   }
 }
