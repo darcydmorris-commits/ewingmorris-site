@@ -1,0 +1,42 @@
+.opening {
+  display: grid;
+  gap: var(--space-md);
+}
+
+.sectionBlock {
+  max-width: 38em;
+}
+
+.list {
+  display: grid;
+  gap: var(--space-sm);
+  margin: var(--space-lg) 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.list li {
+  position: relative;
+  padding-left: 1rem;
+  color: var(--color-text-secondary);
+}
+
+.list li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: var(--color-text-tertiary);
+}
+
+.sectionFollow {
+  margin-top: var(--space-lg);
+  max-width: 38em;
+}
+
+.sectionFollow p {
+  color: var(--color-text-secondary);
+}
+
+.closingBlock {
+  max-width: 38em;
+}

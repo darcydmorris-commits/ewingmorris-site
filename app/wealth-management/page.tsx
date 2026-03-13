@@ -6,51 +6,132 @@ import { PageHeader } from "@/components/PageHeader";
 import { ScrollReveal } from "@/components/ScrollReveal";
 import { SectionWrapper } from "@/components/SectionWrapper";
 import shared from "@/app/interior.module.css";
+import styles from "./wealth-management.module.css";
 
 export const metadata: Metadata = {
-  title: "Wealth Management",
-  description: "Ewing Morris wealth management for families, entrepreneurs, professionals, and select institutions seeking a true thinking partner.",
+  title: "Wealth",
+  description:
+    "Learn how Ewing Morris Wealth helps families allocate capital across internal strategies, external managers, passive exposures, and opportunistic investments.",
 };
 
+const balanceSheetItems = [
+  "liquid investment portfolios",
+  "concentrated stock positions",
+  "private investments or businesses",
+  "opportunistic investments",
+  "liquidity needs and taxes",
+  "outside managers and advisers",
+  "long-term family priorities",
+] as const;
+
+const allocationCards = [
+  [
+    "01",
+    "Low-cost exposure where markets are efficient",
+    "Large cap equities and investment-grade bonds are often best accessed through low-cost index funds and ETFs. This keeps costs low and avoids paying active fees where the probability of consistent outperformance is limited.",
+  ],
+  [
+    "02",
+    "High-conviction active strategies",
+    "Where markets are less efficient - smaller companies, special situations, credit, or shareholder engagement - the firm deploys capital through its internal investment strategies. These areas are where careful research, patience, and active judgment can create an edge.",
+  ],
+  [
+    "03",
+    "External managers",
+    "Some opportunities are best pursued through exceptional outside managers. When appropriate, we allocate capital to a small number of carefully selected firms where we believe the manager's skill and alignment justify the cost.",
+  ],
+  [
+    "04",
+    "Opportunistic investments",
+    "From time to time the firm pursues specific opportunities through co-investments or special purpose vehicles. These tend to be concentrated and situation-specific, often involving areas where the firm has deep research conviction.",
+  ],
+] as const;
+
 const relationshipCards = [
-  ["01", "Direct senior access.", "You work with the people making decisions. Not a junior advisor, not a call centre, not a layered service chain. Darcy, Will, James, and Danielle are the people who know your family, understand your objectives, and pick up the phone. Expect regular portfolio reviews, proactive communication, and direct access whenever you need it."],
-  ["02", "Holistic, not siloed.", "We think across your entire financial life: investment strategy, estate and tax planning considerations, concentrated stock positions, liquidity events, outside manager oversight, and long-term family priorities. We coordinate with your accountant, lawyer, and other advisors so the pieces work together."],
-  ["03", "Transparent reporting.", "Addepar powers our client reporting platform. You see exactly what you own, what it's worth, how it's performing, and how the pieces fit together-across all accounts, strategies, and asset classes. No black boxes."],
-  ["04", "Built for the long term.", "We don't chase quarterly performance or manufacture urgency. Our best client relationships are measured in decades, not transactions. We're building something we'd want for our own families."],
+  [
+    "01",
+    "Direct senior access",
+    "Clients work directly with senior members of the firm. We intentionally keep the number of relationships limited so that each receives meaningful attention and thoughtful advice.",
+  ],
+  [
+    "02",
+    "Whole-balance-sheet thinking",
+    "Investment portfolios do not exist in isolation. We coordinate closely with clients' accountants, lawyers, and other advisers to ensure that investment decisions align with tax planning, liquidity needs, and broader financial goals.",
+  ],
+  [
+    "03",
+    "Stewardship over the long term",
+    "Capital allocation is a long-term exercise. Our focus is on building durable portfolios designed to compound capital thoughtfully over time rather than reacting to short-term market noise.",
+  ],
+] as const;
+
+const clientItems = [
+  "liquidity events such as selling a business",
+  "accumulating significant concentrated positions",
+  "becoming dissatisfied with traditional bank wealth platforms",
+  "seeking a more thoughtful capital allocation partner",
 ] as const;
 
 export default function WealthManagementPage() {
   return (
     <main>
       <PageHeader
-        eyebrow="Wealth Management"
-        title="Most wealth management is either a bank product or a sales pitch. We built something different."
-        lead="At a bank, your advisor is selling the house shelf. At most independents, wealth management is an afterthought bolted onto a fund business. At Ewing Morris, it's the relationship that holds everything together."
+        eyebrow="Wealth"
+        title="Private wealth, built around capital allocation."
+        lead="Most wealth platforms are designed to distribute products. Ewing Morris Wealth was built to help families make better long-term capital decisions."
       />
 
       <SectionWrapper narrow>
         <ScrollReveal>
-          <p>We built our wealth platform for families, entrepreneurs, and professionals who want a thinking partner, not a product distributor. Someone who understands your full balance sheet-liquidity, taxes, concentrated positions, outside managers, new opportunities-and can help you make better capital decisions across all of it.</p>
+          <div className={styles.opening}>
+            <p>
+              The work goes beyond selecting investments. It involves thinking about the entire balance sheet - public markets, private opportunities, taxes, liquidity, and the role capital plays within a family's life.
+            </p>
+            <p>Our role is to help clients allocate capital thoughtfully across all of it.</p>
+          </div>
         </ScrollReveal>
       </SectionWrapper>
 
       <SectionWrapper muted>
         <ScrollReveal>
-          <Eyebrow>Investment approach</Eyebrow>
-          <div className={shared.sectionIntro}>
-            <h2>The Endowment Model.</h2>
-            <p>We call our approach the Endowment Model because it's inspired by how the best endowments invest: low cost where markets are efficient, high conviction where we have a genuine edge.</p>
-            <p>In practice, this means a barbell structure. The passive side uses low-cost index funds and ETFs for efficient market exposure. The active side allocates to our proprietary strategies-small/mid-cap equities, high-yield credit, long-short, activism-where our research, concentration, and patience create real alpha. The whole portfolio is managed tax-aware, rebalanced with discipline, and reported through Addepar.</p>
-            <p>The result is a portfolio that's cheaper than a bank, sharper than a robo-advisor, and more personal than either.</p>
+          <Eyebrow>Your Balance Sheet, Seen as a Whole</Eyebrow>
+          <div className={`${shared.sectionIntro} ${styles.sectionBlock}`}>
+            <h2>Serious capital allocation looks at the whole balance sheet.</h2>
+            <p>Most wealth platforms focus only on the investment account.</p>
+            <p>For many families that includes:</p>
+          </div>
+          <ul className={styles.list}>
+            {balanceSheetItems.map((item) => (
+              <li key={item}>{item}</li>
+            ))}
+          </ul>
+          <div className={styles.sectionFollow}>
+            <p>
+              Ewing Morris Wealth helps clients allocate capital across this broader landscape with clarity and discipline.
+            </p>
           </div>
         </ScrollReveal>
       </SectionWrapper>
 
       <SectionWrapper>
         <ScrollReveal>
-          <Eyebrow>The relationship</Eyebrow>
+          <Eyebrow>How We Allocate Capital</Eyebrow>
           <div className={shared.sectionIntro}>
-            <h2>What the relationship looks like.</h2>
+            <h2>Our approach combines several sources of opportunity.</h2>
+          </div>
+          <div>
+            {allocationCards.map(([number, title, description]) => (
+              <Card key={number} number={number} title={title} description={description} />
+            ))}
+          </div>
+        </ScrollReveal>
+      </SectionWrapper>
+
+      <SectionWrapper muted>
+        <ScrollReveal>
+          <Eyebrow>The Relationship</Eyebrow>
+          <div className={shared.sectionIntro}>
+            <h2>Built to feel less like a platform and more like a long-term partnership.</h2>
           </div>
           <div>
             {relationshipCards.map(([number, title, description]) => (
@@ -60,15 +141,53 @@ export default function WealthManagementPage() {
         </ScrollReveal>
       </SectionWrapper>
 
+      <SectionWrapper>
+        <ScrollReveal>
+          <Eyebrow>Who This Is For</Eyebrow>
+          <div className={`${shared.sectionIntro} ${styles.sectionBlock}`}>
+            <h2>Who we typically work with.</h2>
+            <p>
+              Ewing Morris Wealth typically works with families and individuals with investable assets ranging from approximately $1 million to $50 million and above.
+            </p>
+            <p>Many clients come to the firm after:</p>
+          </div>
+          <ul className={styles.list}>
+            {clientItems.map((item) => (
+              <li key={item}>{item}</li>
+            ))}
+          </ul>
+          <div className={styles.sectionFollow}>
+            <p>
+              Some institutional clients and family offices also partner with the firm for access to specific investment capabilities.
+            </p>
+          </div>
+        </ScrollReveal>
+      </SectionWrapper>
+
       <SectionWrapper muted>
         <ScrollReveal>
-          <Eyebrow>Clients</Eyebrow>
-          <div className={shared.sectionIntro}>
-            <h2>Who we work with.</h2>
-            <p>Our clients are typically families, entrepreneurs, and professionals with $1 million to $50 million or more in investable assets. Many come to us after a liquidity event, a change in circumstances, or simply dissatisfaction with what they've experienced at a bank or larger institution.</p>
-            <p>We also work with select institutions and family offices who want access to our investment strategies, our activism capabilities, or both.</p>
+          <div className={`${shared.sectionIntro} ${styles.closingBlock}`}>
+            <Eyebrow>Closing</Eyebrow>
+            <h2>One philosophy, expressed through different forms of capital.</h2>
+            <p>
+              Ewing Morris Wealth integrates low-cost market exposure, internal investment strategies, external managers, and opportunistic investments into a single coherent portfolio.
+            </p>
+            <p>
+              The objective is simple: to help families allocate capital thoughtfully and steward wealth responsibly over the long term.
+            </p>
           </div>
-          <Button href="/contact">Start with a conversation</Button>
+        </ScrollReveal>
+      </SectionWrapper>
+
+      <SectionWrapper>
+        <ScrollReveal>
+          <div className={shared.sectionIntro}>
+            <h2>Start a conversation.</h2>
+            <p>
+              Learn how Ewing Morris Wealth approaches portfolio construction and long-term capital allocation.
+            </p>
+          </div>
+          <Button href="/contact">Start a conversation</Button>
         </ScrollReveal>
       </SectionWrapper>
     </main>
