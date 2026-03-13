@@ -8,7 +8,7 @@ const navItems = [
   { href: "/about", label: "About" },
   { href: "/strategies", label: "How We Invest" },
   { href: "/wealth-management", label: "Wealth" },
-  { href: "/activism-special-situations", label: "Activism" },
+  { href: "/activism-special-situations", label: "Shareholder Engagement" },
   { href: "/team", label: "Team" },
   { href: "/insights", label: "Insights" },
   { href: "/careers", label: "Careers" },
