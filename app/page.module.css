@@ -106,13 +106,18 @@
   gap: var(--space-xl);
   margin-top: var(--space-xl);
   align-items: start;
-  justify-items: start;
 }
 
-.independenceGrid p {
+.independenceItem {
+  width: 100%;
+  max-width: 24rem;
+  justify-self: start;
+}
+
+.independenceItem p {
   color: var(--color-text-secondary);
   text-align: left;
-  max-width: 24rem;
+  max-width: none;
 }
 
 .statsGrid {
@@ -215,6 +220,10 @@
   .heroGrid,
   .independenceGrid {
     grid-template-columns: 1fr;
+  }
+
+  .independenceItem {
+    max-width: none;
   }
 }
 

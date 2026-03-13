@@ -111,15 +111,21 @@ export default function HomePage() {
             </p>
           </div>
           <div className={styles.independenceGrid}>
-            <p>
-              No captive product shelf. No house view to defend. No pressure to make every client relationship look the same.
-            </p>
-            <p>
-              It allows the firm to move between wealth management, activism, credit, special situations, and concentrated public-market investing with a single standard: whether the work is sound and the opportunity is real.
-            </p>
-            <p>
-              It also changes the client experience. Advice stays direct. Incentives stay aligned. Judgment is not filtered through a distribution model.
-            </p>
+            <div className={styles.independenceItem}>
+              <p>
+                No captive product shelf. No house view to defend. No pressure to make every client relationship look the same.
+              </p>
+            </div>
+            <div className={styles.independenceItem}>
+              <p>
+                It allows the firm to move between wealth management, activism, credit, special situations, and concentrated public-market investing with a single standard: whether the work is sound and the opportunity is real.
+              </p>
+            </div>
+            <div className={styles.independenceItem}>
+              <p>
+                It also changes the client experience. Advice stays direct. Incentives stay aligned. Judgment is not filtered through a distribution model.
+              </p>
+            </div>
           </div>
           <div className={styles.sectionAction}>
             <Button href="/about" variant="link">Read the full story</Button>
