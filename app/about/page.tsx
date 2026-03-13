@@ -17,8 +17,7 @@ const historyItems = [
   "John Ewing and Darcy Morris co-found Ewing Morris with $2 million in capital. The Opportunities Fund launches in September, focused on North American equities.",
   "Randy Steuart joins as Portfolio Manager to build the Flexible Fixed Income strategy. Perry Schultz joins to lead operations.",
   "Anthony Hammill joins as Partner. The Dark Horse Fund — a low-net long/short small-cap strategy — comes under the Ewing Morris umbrella.",
-  "Breann Kelly joins as General Counsel and Chief Operating Officer, bringing institutional compliance and legal experience from BlackRock Canada and Osler.",
-  "Will Jones joins as Partner, Relationships. The firm's wealth management platform begins to take shape.",
+  "Breann Kelly joins as General Counsel and Chief Operating Officer, bringing institutional compliance and legal experience from BlackRock Canada and Osler. Will Jones joins as Partner, Relationships. The firm's wealth management platform begins to take shape.",
   "James Telfser and team join from Aventine, adding portfolio management depth and expanding the firm's wealth capabilities. The Endowment Model launches.",
   "Ewing Morris completes a $32.8 million tender offer for BTB REIT. John Ewing is appointed to the board of Sherritt International. Assets under management approach $1 billion.",
   "The firm continues to invest, build, and grow — independently.",
@@ -32,7 +31,7 @@ const valueItems = [
   "Independence over convenience. We answer to our clients, not a parent company.",
 ];
 
-const historyYears = ["2011", "2015", "2017", "2018", "2019", "2024", "2025", "2026"];
+const historyYears = ["2011", "2015", "2017", "2018", "2024", "2025", "2026"];
 
 export default function AboutPage() {
   return (
