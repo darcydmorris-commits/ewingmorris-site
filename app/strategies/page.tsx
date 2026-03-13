@@ -42,9 +42,12 @@ export default function StrategiesPage() {
         <ScrollReveal>
           <Eyebrow>Architecture</Eyebrow>
           <div className={`${shared.sectionIntro} ${styles.architectureIntro}`}>
-            <h2>How the platform is organized.</h2>
+            <h2>The Ewing Morris Endowment Model</h2>
             <p>
-              Wealth is the hub. Capital allocation is the decision-making layer. The underlying domains are tools within that structure, used where they are most useful to the client balance sheet.
+              A wealth-centered approach to capital allocation that combines public markets, engagement, credit, and special situations.
+            </p>
+            <p>
+              Wealth is the relationship layer. Capital allocation is the core work. The return engines below are expressions of the same philosophy, used where they are most useful to the balance sheet.
             </p>
           </div>
           <div className={styles.platformDiagram}>
@@ -52,14 +55,17 @@ export default function StrategiesPage() {
             <div className={styles.platformConnector} aria-hidden="true" />
             <div className={`${styles.platformNode} ${styles.platformHub}`}>Ewing Morris Wealth</div>
             <div className={styles.platformConnector} aria-hidden="true" />
-            <div className={styles.platformNode}>Capital Allocation Engine</div>
+            <div className={`${styles.platformNode} ${styles.platformCore}`}>Capital Allocation</div>
             <div className={styles.platformConnector} aria-hidden="true" />
-            <div className={styles.platformDomains}>
-              {architectureDomains.map((domain) => (
-                <div key={domain} className={styles.platformDomain}>
-                  {domain}
-                </div>
-              ))}
+            <div className={styles.platformDomainLayer}>
+              <p className={styles.platformLabel}>Return Engines</p>
+              <div className={styles.platformDomains}>
+                {architectureDomains.map((domain) => (
+                  <div key={domain} className={styles.platformDomain}>
+                    {domain}
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
         </ScrollReveal>

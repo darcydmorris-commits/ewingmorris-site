@@ -183,13 +183,13 @@ export default function WealthManagementPage() {
         </ScrollReveal>
       </SectionWrapper>
 
-      <SectionWrapper>
+      <SectionWrapper className={styles.serviceSection}>
         <ScrollReveal>
           <Eyebrow>How the Relationship Begins</Eyebrow>
           <div className={`${shared.sectionIntro} ${styles.serviceIntro}`}>
             <h2>How the relationship begins</h2>
             <p>
-              A deliberate process for understanding the balance sheet, clarifying priorities, and building the right long-term architecture.
+              A deliberate process for understanding a family's balance sheet, priorities, and long-term objectives.
             </p>
           </div>
           <div className={styles.serviceJourney}>
