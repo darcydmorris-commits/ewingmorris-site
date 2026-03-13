@@ -27,7 +27,7 @@ export default function StrategiesPage() {
       <PageHeader
         eyebrow="How We Invest"
         title="Capital allocation before products."
-        lead="Ewing Morris begins with clients, capital, and the job portfolio construction is meant to do. Strategies matter only in the context of the balance sheet they serve and the opportunities that justify them."
+        lead="Ewing Morris begins with clients, capital, and the role portfolio construction is meant to play. Strategies matter only in the context of the balance sheet they serve and the opportunities that justify them."
       />
 
       <SectionWrapper narrow>
@@ -40,37 +40,36 @@ export default function StrategiesPage() {
 
       <SectionWrapper>
         <ScrollReveal>
-          <Eyebrow>Architecture</Eyebrow>
-          <div className={`${shared.sectionIntro} ${styles.architectureIntro}`}>
-            <h2>The Ewing Morris Endowment Model</h2>
-            <p>A wealth-centered approach to capital allocation across multiple investment domains.</p>
-          </div>
+          <Eyebrow>The Ewing Morris Endowment Model</Eyebrow>
+          <div className={styles.frameworkSection}>
+            <div className={styles.frameworkHeader}>
+              <h2 className={styles.frameworkStatement}>
+                Wealth-centered capital allocation across multiple investment domains.
+              </h2>
+            </div>
 
-          <div className={styles.frameworkWrap}>
-            <p className={styles.clientLabel}>Clients</p>
             <div className={styles.frameworkPlate}>
-              <div className={styles.frameworkCoreBand}>
-                <div className={styles.wealthModule}>Ewing Morris Wealth</div>
-                <div className={styles.allocationModule}>Capital Allocation</div>
+              <p className={styles.clientLabel}>Clients</p>
+
+              <div className={styles.frameworkCore}>
+                <div className={styles.wealthBand}>Ewing Morris Wealth</div>
+                <div className={styles.allocationBand}>Capital Allocation</div>
               </div>
 
-              <div className={styles.frameworkDomainsBand}>
-                <p className={styles.frameworkLabel}>Investment Domains</p>
-                <div className={styles.domainGrid}>
-                  {architectureDomains.map((domain) => (
-                    <div key={domain} className={styles.domainModule}>
-                      {domain}
-                    </div>
-                  ))}
-                </div>
+              <div className={styles.frameworkDomains}>
+                {architectureDomains.map((domain) => (
+                  <div key={domain} className={styles.domainModule}>
+                    {domain}
+                  </div>
+                ))}
               </div>
             </div>
-          </div>
 
-          <div className={styles.frameworkSupport}>
-            <p>
-              Wealth is the relationship layer. Capital allocation is the core work. The investment domains are tools applied according to the needs of the balance sheet.
-            </p>
+            <div className={styles.frameworkSupport}>
+              <p>
+                Wealth is the relationship layer. Capital allocation is the core work. The investment domains are tools applied according to the needs of the balance sheet.
+              </p>
+            </div>
           </div>
         </ScrollReveal>
       </SectionWrapper>
@@ -117,7 +116,7 @@ export default function StrategiesPage() {
           <div className={`${shared.sectionIntro} ${styles.domainSection}`}>
             <h2>Dedicated capital for discrete opportunities</h2>
             <p>
-              Some opportunities are best pursued with dedicated capital rather than inside a broad pool. In those cases, we may structure co-investments or SPVs for a defined idea, timeline, and risk profile. The objective is thoughtful, disciplined capital allocation.
+              Some opportunities are best pursued with dedicated capital rather than inside a broad pool. In those cases, we may structure co-investments or SPVs for a defined idea, timeline, and risk profile. These structures exist to pursue defined opportunities with the right capital and the right duration.
             </p>
           </div>
         </ScrollReveal>
