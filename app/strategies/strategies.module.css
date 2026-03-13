@@ -13,18 +13,18 @@
   background: var(--color-bg-elevated);
 }
 
-.frameworkLevelTop,
-.frameworkLevelCore,
-.frameworkLevelBottom {
+.frameworkClientsBand,
+.frameworkCoreBand,
+.frameworkDomainsBand {
   padding: var(--space-lg);
 }
 
-.frameworkLevelCore,
-.frameworkLevelBottom {
+.frameworkCoreBand,
+.frameworkDomainsBand {
   border-top: 1px solid var(--color-border-subtle);
 }
 
-.frameworkLevelTop {
+.frameworkClientsBand {
   display: flex;
   justify-content: center;
 }
@@ -47,31 +47,30 @@
 }
 
 .clientModule {
-  min-width: 12rem;
-  padding: var(--space-sm) var(--space-lg);
+  min-width: 10rem;
+  padding: 0.75rem var(--space-lg);
   font-family: var(--font-sans);
-  font-size: var(--text-small);
+  font-size: var(--text-caption);
   font-weight: 500;
-  letter-spacing: 0.04em;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
   text-align: center;
-  color: var(--color-heading);
+  color: var(--color-text-secondary);
 }
 
-.frameworkLevelCore {
+.frameworkCoreBand {
   display: grid;
-  grid-template-columns: minmax(0, 1.25fr) minmax(16rem, 0.9fr);
   gap: var(--space-md);
-  align-items: stretch;
 }
 
 .wealthModule {
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 7.5rem;
+  min-height: 7.75rem;
   padding: var(--space-lg);
   font-family: var(--font-serif);
-  font-size: var(--text-h2);
+  font-size: clamp(2rem, 3vw, 2.6rem);
   font-weight: 400;
   text-align: center;
   color: var(--color-heading);
@@ -81,12 +80,13 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 7.5rem;
-  padding: var(--space-lg);
+  min-height: 5rem;
+  padding: var(--space-md) var(--space-lg);
   font-family: var(--font-sans);
   font-size: var(--text-body-lg);
   font-weight: 600;
-  letter-spacing: 0.03em;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
   text-align: center;
   color: var(--color-heading);
 }
@@ -108,7 +108,7 @@
 }
 
 .domainModule {
-  min-height: 6.5rem;
+  min-height: 6rem;
   padding: var(--space-md);
   display: flex;
   align-items: center;
@@ -116,7 +116,7 @@
   font-family: var(--font-sans);
   font-size: var(--text-small);
   font-weight: 500;
-  letter-spacing: 0.04em;
+  letter-spacing: 0.03em;
   text-align: center;
   color: var(--color-heading);
 }
@@ -126,38 +126,33 @@
 }
 
 @media (max-width: 1023px) {
-  .frameworkLevelCore {
-    grid-template-columns: 1fr;
-  }
-
   .domainGrid {
     grid-template-columns: 1fr 1fr;
   }
 }
 
 @media (max-width: 767px) {
-  .frameworkLevelTop,
-  .frameworkLevelCore,
-  .frameworkLevelBottom {
+  .frameworkClientsBand,
+  .frameworkCoreBand,
+  .frameworkDomainsBand {
     padding: var(--space-md);
   }
 
-  .clientModule,
-  .wealthModule,
-  .allocationModule,
-  .domainModule {
-    min-height: auto;
-  }
-
   .wealthModule {
+    min-height: 6.5rem;
     font-size: var(--text-h3);
   }
 
   .allocationModule {
+    min-height: 4.25rem;
     font-size: var(--text-body);
   }
 
   .domainGrid {
     grid-template-columns: 1fr;
+  }
+
+  .domainModule {
+    min-height: auto;
   }
 }

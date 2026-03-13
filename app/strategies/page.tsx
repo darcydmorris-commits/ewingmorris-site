@@ -43,22 +43,22 @@ export default function StrategiesPage() {
           <Eyebrow>Architecture</Eyebrow>
           <div className={`${shared.sectionIntro} ${styles.architectureIntro}`}>
             <h2>The Ewing Morris Endowment Model</h2>
+            <p>A wealth-centered approach to capital allocation across multiple investment domains.</p>
             <p>
-              A wealth-centered approach to capital allocation across multiple investment domains.
-            </p>
-            <p>
-              Wealth is the relationship layer. Capital allocation is the core work. The investment domains below are tools within the same philosophy, used where they are most useful to the balance sheet.
+              Clients hire the firm through Wealth relationships. Capital allocation is the core work. The investment domains below are different expressions of the same philosophy.
             </p>
           </div>
           <div className={styles.frameworkPlate}>
-            <div className={styles.frameworkLevelTop}>
+            <div className={styles.frameworkClientsBand}>
               <div className={styles.clientModule}>Clients</div>
             </div>
-            <div className={styles.frameworkLevelCore}>
+
+            <div className={styles.frameworkCoreBand}>
               <div className={styles.wealthModule}>Ewing Morris Wealth</div>
               <div className={styles.allocationModule}>Capital Allocation</div>
             </div>
-            <div className={styles.frameworkLevelBottom}>
+
+            <div className={styles.frameworkDomainsBand}>
               <p className={styles.frameworkLabel}>Investment Domains</p>
               <div className={styles.domainGrid}>
                 {architectureDomains.map((domain) => (
