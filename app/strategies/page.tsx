@@ -80,7 +80,7 @@ export default function StrategiesPage() {
           <div className={`${shared.sectionIntro} ${styles.domainSection}`}>
             <h2>Dedicated capital for discrete opportunities</h2>
             <p>
-              Some opportunities are best pursued with dedicated capital rather than inside a broad pool. In those cases, we may structure co-investments or SPVs for a defined idea, timeline, and risk profile. The aim is precision.
+              Some opportunities are best pursued with dedicated capital rather than inside a broad pool. In those cases, we may structure co-investments or SPVs for a defined idea, timeline, and risk profile. The objective is thoughtful, disciplined capital allocation.
             </p>
           </div>
         </ScrollReveal>
