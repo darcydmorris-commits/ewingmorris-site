@@ -26,6 +26,11 @@
   color: #ffffff;
 }
 
+.heroHeadline br {
+  display: block;
+  margin-top: 0.35em;
+}
+
 .heroLead {
   font-family: var(--font-sans);
   font-size: var(--text-body);
