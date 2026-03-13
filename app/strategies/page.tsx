@@ -42,27 +42,16 @@ export default function StrategiesPage() {
         <ScrollReveal>
           <Eyebrow>The Ewing Morris Endowment Model</Eyebrow>
           <div className={styles.frameworkSection}>
-            <div className={styles.frameworkHeader}>
-              <h2 className={styles.frameworkStatement}>
-                Wealth-centered capital allocation across multiple investment domains.
-              </h2>
-            </div>
+            <h2 className={styles.frameworkStatement}>
+              Wealth-centered capital allocation across multiple investment domains.
+            </h2>
 
-            <div className={styles.frameworkPlate}>
-              <p className={styles.clientLabel}>Clients</p>
-
-              <div className={styles.frameworkCore}>
-                <div className={styles.wealthBand}>Ewing Morris Wealth</div>
-                <div className={styles.allocationBand}>Capital Allocation</div>
-              </div>
-
-              <div className={styles.frameworkDomains}>
-                {architectureDomains.map((domain) => (
-                  <div key={domain} className={styles.domainModule}>
-                    {domain}
-                  </div>
-                ))}
-              </div>
+            <div className={styles.domainRow}>
+              {architectureDomains.map((domain) => (
+                <span key={domain} className={styles.domainLabel}>
+                  {domain}
+                </span>
+              ))}
             </div>
 
             <div className={styles.frameworkSupport}>
