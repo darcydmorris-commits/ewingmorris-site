@@ -81,20 +81,6 @@ export default function WealthManagementPage() {
         lead="Most wealth platforms are designed to distribute products. Ewing Morris Wealth was built to help families make better long-term capital decisions."
       />
 
-      <SectionWrapper narrow className={styles.midPageSection}>
-        <ScrollReveal>
-          <div className={styles.midPageCta}>
-            <div className={shared.sectionIntro}>
-              <h2>Prefer to see how we invest?</h2>
-              <p>
-                Explore how Ewing Morris allocates capital across public markets, credit, and special situations.
-              </p>
-            </div>
-            <Button href="/strategies" variant="secondary">How We Invest</Button>
-          </div>
-        </ScrollReveal>
-      </SectionWrapper>
-
       <SectionWrapper narrow>
         <ScrollReveal>
           <div className={styles.opening}>
@@ -123,6 +109,20 @@ export default function WealthManagementPage() {
             <p>
               Ewing Morris Wealth helps clients allocate capital across this broader landscape with clarity and discipline.
             </p>
+          </div>
+        </ScrollReveal>
+      </SectionWrapper>
+
+      <SectionWrapper narrow className={styles.midPageSection}>
+        <ScrollReveal>
+          <div className={styles.midPageCta}>
+            <div className={shared.sectionIntro}>
+              <h2>Prefer to see how we invest?</h2>
+              <p>
+                Explore how Ewing Morris allocates capital across public markets, credit, and special situations.
+              </p>
+            </div>
+            <Button href="/strategies" variant="secondary">How We Invest</Button>
           </div>
         </ScrollReveal>
       </SectionWrapper>
