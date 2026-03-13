@@ -45,7 +45,7 @@ export default function ShareholderEngagementPage() {
       <PageHeader
         eyebrow="Shareholder Engagement"
         title="Shareholder engagement when ownership calls for it."
-        lead="At Ewing Morris, engagement is an extension of ownership. When we hold a meaningful stake and believe governance, capital allocation, or strategic direction can be improved, we are prepared to engage thoughtfully and constructively."
+        lead="At Ewing Morris, engagement is an extension of ownership. When we hold a meaningful stake and believe governance, capital allocation, or strategic direction can be improved, we engage thoughtfully and constructively."
       />
 
       <SectionWrapper narrow>
@@ -65,12 +65,23 @@ export default function ShareholderEngagementPage() {
 
       <SectionWrapper muted>
         <ScrollReveal>
+          <Eyebrow>Selective by Design</Eyebrow>
+          <div className={shared.sectionIntro}>
+            <h2>Engagement is selective by design.</h2>
+            <p>
+              We do not seek engagement for its own sake. We engage only where research, ownership, and circumstance make it constructive.
+            </p>
+          </div>
+        </ScrollReveal>
+      </SectionWrapper>
+
+      <SectionWrapper>
+        <ScrollReveal>
           <Eyebrow>Our Approach</Eyebrow>
           <div className={shared.sectionIntro}>
             <h2>Three conditions for engagement.</h2>
-            <h3>Selective by design</h3>
             <p>
-              We do not seek engagement for its own sake. We engage only where research, ownership, and circumstance make it constructive.
+              Our approach begins with three conditions: deep research conviction, meaningful ownership, and a constructive opportunity to improve outcomes.
             </p>
           </div>
           <div>
@@ -81,20 +92,21 @@ export default function ShareholderEngagementPage() {
         </ScrollReveal>
       </SectionWrapper>
 
-      <SectionWrapper>
+      <SectionWrapper muted>
         <ScrollReveal>
           <Eyebrow>Forms of Engagement</Eyebrow>
           <div className={shared.sectionIntro}>
             <h2>How ownership can be expressed.</h2>
+            <p>Shareholder engagement can take different forms depending on the situation.</p>
             <p>
-              Engagement takes different forms depending on the facts, the company, and the opportunity. The common thread is stewardship rather than spectacle.
+              The common thread is stewardship rather than spectacle.
             </p>
           </div>
           <NumberedList items={engagementForms} />
         </ScrollReveal>
       </SectionWrapper>
 
-      <SectionWrapper muted>
+      <SectionWrapper>
         <ScrollReveal>
           <Eyebrow>Special Situations</Eyebrow>
           <div className={shared.sectionIntro}>
@@ -114,7 +126,7 @@ export default function ShareholderEngagementPage() {
           <div className={shared.sectionIntro}>
             <h2>Ownership carries responsibility.</h2>
             <p>
-              We view shareholder engagement as part of disciplined capital allocation. When ownership creates both the right and the obligation to engage, we believe thoughtful stewardship can serve clients, companies, and the market more broadly.
+              When Ewing Morris believes it can improve outcomes for a company and its shareholders, engagement becomes a natural extension of investment stewardship.
             </p>
           </div>
         </ScrollReveal>
