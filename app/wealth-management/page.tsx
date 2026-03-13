@@ -90,7 +90,7 @@ export default function WealthManagementPage() {
                 Explore how Ewing Morris allocates capital across public markets, credit, and special situations.
               </p>
             </div>
-            <Button href="/strategies" variant="link">How We Invest</Button>
+            <Button href="/strategies" variant="secondary">How We Invest</Button>
           </div>
         </ScrollReveal>
       </SectionWrapper>
