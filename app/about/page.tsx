@@ -19,7 +19,7 @@ const historyItems = [
   "Anthony Hammill joins as Partner. The Dark Horse Fund — a low-net long/short small-cap strategy — comes under the Ewing Morris umbrella.",
   "Breann Kelly joins as General Counsel and Chief Operating Officer, bringing institutional compliance and legal experience from BlackRock Canada and Osler. Will Jones joins as Partner, Relationships. The firm's wealth management platform begins to take shape.",
   "James Telfser and team join from Aventine, adding portfolio management depth and expanding the firm's wealth capabilities. The Endowment Model launches.",
-  "Ewing Morris completes a $32.8 million tender offer for BTB REIT. John Ewing is appointed to the board of Sherritt International. Assets under management approach $1 billion.",
+  "Ewing Morris completes a $32.8 million tender offer for BTB REIT.\nJohn Ewing is appointed to the board of Sherritt International. Assets under management approach $1 billion.",
   "The firm continues to invest, build, and grow — independently.",
 ];
 
@@ -44,7 +44,7 @@ export default function AboutPage() {
 
       <SectionWrapper narrow>
         <ScrollReveal>
-          <p>Fourteen years later, the firm manages close to $1 billion for more than 500 families and select institutions. What began as a focused small-cap equity strategy has expanded into high-yield credit, shareholder activism, special situations, niche real estate, and a full private wealth platform. The team has grown to 17 people. The conviction hasn't changed.</p>
+          <p>Fourteen years later, the firm manages close to $1 billion for more than 500 families and select institutions. What began as a focused small-cap equity strategy has expanded into credit, activism, special situations, niche real estate, and private wealth. The team has grown to 17 people. The conviction has not changed.</p>
         </ScrollReveal>
       </SectionWrapper>
 
@@ -76,7 +76,14 @@ export default function AboutPage() {
             {historyItems.map((item, index) => (
               <div key={historyYears[index]} className={shared.timelineItem}>
                 <p className={shared.timelineYear}>{historyYears[index]}</p>
-                <p className={shared.timelineText}>{item}</p>
+                <p className={shared.timelineText}>
+                  {item.split("\n").map((line, lineIndex) => (
+                    <span key={`${historyYears[index]}-${lineIndex}`}>
+                      {line}
+                      {lineIndex < item.split("\n").length - 1 ? <br /> : null}
+                    </span>
+                  ))}
+                </p>
               </div>
             ))}
           </div>
@@ -101,7 +108,7 @@ export default function AboutPage() {
           <Eyebrow>Values</Eyebrow>
           <div className={shared.sectionIntro}>
             <h2>What we believe.</h2>
-            <p>We don't put values on a wall. But if you spend time with the firm, you'll see these in how we work:</p>
+            <p>We have never been interested in values statements for their own sake. But if you spend time with the firm, these are the principles you will see in practice.</p>
           </div>
           <NumberedList items={valueItems} />
         </ScrollReveal>
