@@ -138,7 +138,7 @@ export default function StrategiesPage() {
       <SectionWrapper>
         <ScrollReveal>
           <div className={shared.sectionIntro}>
-            <h2>See how it fits within wealth.</h2>
+            <h2>See how it fits within Ewing Morris Wealth.</h2>
             <p>
               Ewing Morris Wealth is where these capabilities become an actual client portfolio: tax-aware, balanced against liquidity needs, and shaped around the family or institution the capital belongs to.
             </p>
