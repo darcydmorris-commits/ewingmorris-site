@@ -40,10 +40,12 @@ export default function StrategiesPage() {
 
       <SectionWrapper>
         <ScrollReveal>
-          <Eyebrow>The Ewing Morris Endowment Model</Eyebrow>
           <div className={styles.frameworkSection}>
+            <Eyebrow>The Ewing Morris Endowment Model</Eyebrow>
             <h2 className={styles.frameworkStatement}>
-              <strong>Wealth-centered</strong> capital allocation across multiple investment domains.
+              <strong>Wealth-centered</strong> capital allocation
+              <br />
+              across multiple investment domains.
             </h2>
 
             <div className={styles.domainRow}>
@@ -56,7 +58,7 @@ export default function StrategiesPage() {
 
             <div className={styles.frameworkSupport}>
               <p>
-                Wealth is the relationship layer. Capital allocation is the core work. The investment domains are tools applied according to each client's balance sheet.
+                Wealth is the relationship layer. Capital allocation is the core work. The investment domains are tools applied according to the needs of each client's balance sheet.
               </p>
             </div>
           </div>
