@@ -18,16 +18,12 @@
 }
 
 .heroHeadline {
-  max-width: 16ch;
+  max-width: 12ch;
   font-family: var(--font-serif);
   font-size: var(--text-display);
   font-weight: 400;
   line-height: var(--leading-tight);
   color: #ffffff;
-}
-
-.heroHeadlineItalic {
-  font-style: italic;
 }
 
 .heroLead {
@@ -42,6 +38,7 @@
   font-size: var(--text-body);
   color: rgba(255, 255, 255, 0.5);
   margin-top: var(--space-xl);
+  max-width: 36rem;
 }
 
 .heroActions {
@@ -51,17 +48,13 @@
   gap: var(--space-md);
 }
 
-.heroPrimaryCta,
-.heroSecondaryCta {
+.heroPrimaryCta {
   display: inline-flex;
   align-items: center;
   font-family: var(--font-sans);
   font-size: var(--text-small);
   font-weight: 500;
   text-decoration: none;
-}
-
-.heroPrimaryCta {
   border: 1px solid rgba(255, 255, 255, 0.7);
   color: #ffffff;
   padding: 0.875rem 2rem;
@@ -74,21 +67,11 @@
   color: var(--color-bg-deep);
 }
 
-.heroSecondaryCta {
-  color: rgba(255, 255, 255, 0.6);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.7);
-  padding-bottom: 0.125rem;
-}
-
-.heroSecondaryCta:hover {
-  color: #ffffff;
-  border-bottom-color: #ffffff;
-}
-
 .pathsGrid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: var(--space-xl);
+  margin-top: var(--space-xl);
 }
 
 .pathColumn {
@@ -103,6 +86,27 @@
 }
 
 .pathBody {
+  color: var(--color-text-secondary);
+}
+
+.independenceIntro {
+  display: grid;
+  gap: var(--space-md);
+  max-width: 44rem;
+}
+
+.independenceIntro p {
+  color: var(--color-text-secondary);
+}
+
+.independenceGrid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: var(--space-xl);
+  margin-top: var(--space-xl);
+}
+
+.independenceGrid p {
   color: var(--color-text-secondary);
 }
 
@@ -146,13 +150,31 @@
   color: var(--color-text-secondary);
 }
 
-.insightsPlaceholder {
+.insightsList {
   margin-top: var(--space-xl);
+  border-top: 1px solid var(--color-border-subtle);
 }
 
-.placeholderText {
+.insightRow {
+  display: grid;
+  gap: var(--space-xs);
+  padding: var(--space-lg) 0;
+  border-bottom: 1px solid var(--color-border-subtle);
+}
+
+.insightMeta {
   font-family: var(--font-sans);
-  font-size: var(--text-body);
+  font-size: var(--text-small);
+  color: var(--color-text-tertiary);
+}
+
+.insightTitle {
+  font-family: var(--font-serif);
+  font-size: var(--text-h3);
+  font-weight: 400;
+}
+
+.insightDescription {
   color: var(--color-text-secondary);
 }
 
@@ -172,6 +194,7 @@
 }
 
 @media (max-width: 1023px) {
+  .independenceGrid,
   .statsGrid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
@@ -182,7 +205,8 @@
 }
 
 @media (max-width: 768px) {
-  .heroGrid {
+  .heroGrid,
+  .independenceGrid {
     grid-template-columns: 1fr;
   }
 }
