@@ -68,6 +68,10 @@ export default function ShareholderEngagementPage() {
           <Eyebrow>Our Approach</Eyebrow>
           <div className={shared.sectionIntro}>
             <h2>Three conditions for engagement.</h2>
+            <h3>Selective by design</h3>
+            <p>
+              We do not seek engagement for its own sake. We engage only where research, ownership, and circumstance make it constructive.
+            </p>
           </div>
           <div>
             {engagementConditions.map(([number, title, description]) => (

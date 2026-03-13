@@ -6,8 +6,8 @@ import styles from "./Nav.module.css";
 
 const navItems = [
   { href: "/about", label: "About" },
-  { href: "/strategies", label: "How We Invest" },
   { href: "/wealth-management", label: "Wealth" },
+  { href: "/strategies", label: "How We Invest" },
   { href: "/activism-special-situations", label: "Shareholder Engagement" },
   { href: "/team", label: "Team" },
   { href: "/insights", label: "Insights" },
