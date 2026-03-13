@@ -88,9 +88,10 @@ export default function AboutPage() {
           <Eyebrow>Independence</Eyebrow>
           <div className={shared.sectionIntro}>
             <h2>Why we'll never sell.</h2>
-            <p>In the past five years, CI Financial was taken private by Mubadala for $4.7 billion. Burgundy was acquired by BMO for $625 million. Guardian Capital was sold to Desjardins for $1.67 billion. The number of independent brokerages in Canada has fallen from roughly 200 to fewer than 160.</p>
-            <p>We understand why firms sell. We've chosen a different path. Independence is what allows us to take concentrated positions when we have conviction, run activism campaigns when boards aren't serving shareholders, build SPVs for specific opportunities, and tell clients the truth even when it's uncomfortable.</p>
-            <p>Ewing Morris is 100% employee-owned. Every partner invests alongside clients. Our interests are aligned because our structure requires it, not because our marketing says so.</p>
+            <p>Across the investment industry, many independent firms have chosen to sell to larger financial institutions. We understand why. Scale can make distribution easier and create liquidity for founders.</p>
+            <p>We have chosen a different path.</p>
+            <p>Independence is what allows us to take concentrated positions when we have conviction, run activism campaigns when boards are not serving shareholders, build special purpose vehicles for specific opportunities, and tell clients the truth even when it is uncomfortable.</p>
+            <p>Ewing Morris is employee-owned. Every partner invests alongside clients on the same terms. Our interests remain aligned because our structure requires it, not because our marketing says so.</p>
           </div>
         </ScrollReveal>
       </SectionWrapper>
