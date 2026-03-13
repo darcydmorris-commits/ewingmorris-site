@@ -181,13 +181,9 @@ export default function WealthManagementPage() {
       <SectionWrapper muted>
         <ScrollReveal>
           <div className={`${shared.sectionIntro} ${styles.closingBlock}`}>
-            <Eyebrow>Closing</Eyebrow>
             <h2>One philosophy, expressed through different forms of capital.</h2>
             <p>
-              Ewing Morris Wealth integrates low-cost market exposure, internal investment strategies, external managers, and opportunistic investments into a coherent portfolio.
-            </p>
-            <p>
-              The objective is simple: to help families allocate capital thoughtfully and steward wealth responsibly over the long term.
+              Ewing Morris Wealth integrates low-cost market exposure, internal investment strategies, external managers, and opportunistic investments into a coherent portfolio designed to steward family capital over the long term.
             </p>
           </div>
         </ScrollReveal>
