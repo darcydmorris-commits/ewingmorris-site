@@ -64,11 +64,16 @@ export default function HomePage() {
         <div className="container">
           <ScrollReveal className={styles.heroInner}>
             <div className={styles.heroGrid}>
-              <h1 className={styles.heroHeadline}>
-                Invest thoughtfully.
-                <br />
-                Build enduring wealth.
-              </h1>
+              <div className={styles.heroHeadlineGroup}>
+                <h1 className={styles.heroHeadline}>
+                  Invest thoughtfully.
+                  <br />
+                  Build enduring wealth.
+                </h1>
+                <p className={styles.heroClarifier}>
+                  Ewing Morris helps families and institutions allocate capital thoughtfully across public markets, private opportunities, and selective internal strategies.
+                </p>
+              </div>
               <p className={styles.heroLead}>
                 Ewing Morris is an independent, employee-owned investment firm based in Toronto. We apply a private-equity mindset to public markets, focusing on opportunities often overlooked by larger institutions.
               </p>

@@ -17,6 +17,11 @@
   align-items: end;
 }
 
+.heroHeadlineGroup {
+  display: grid;
+  gap: var(--space-lg);
+}
+
 .heroHeadline {
   max-width: 12ch;
   font-family: var(--font-serif);
@@ -29,6 +34,15 @@
 .heroHeadline br {
   display: block;
   margin-top: 0.35em;
+}
+
+.heroClarifier {
+  max-width: 32rem;
+  font-family: var(--font-sans);
+  font-size: var(--text-body);
+  line-height: var(--leading-body);
+  color: rgba(255, 255, 255, 0.72);
+  text-align: left;
 }
 
 .heroLead {
