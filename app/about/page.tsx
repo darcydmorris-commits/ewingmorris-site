@@ -108,7 +108,11 @@ export default function AboutPage() {
           <Eyebrow>Values</Eyebrow>
           <div className={shared.sectionIntro}>
             <h2>What we believe.</h2>
-            <p>We have never been interested in values statements for their own sake. But if you spend time with the firm, these are the principles you will see in practice.</p>
+            <p>
+              We have never been interested in values statements for their own sake.
+              <br />
+              But if you spend time with the firm, these are the principles you will see in practice.
+            </p>
           </div>
           <NumberedList items={valueItems} />
         </ScrollReveal>

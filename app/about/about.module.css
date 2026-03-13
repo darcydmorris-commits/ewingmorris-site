@@ -1,3 +1,12 @@
 .quoteSupport {
   margin-top: var(--space-lg);
 }
+
+:global(main > section:nth-of-type(3) > div > div > div:last-child > div) {
+  padding-top: calc(var(--space-lg) + var(--space-sm));
+  padding-bottom: calc(var(--space-lg) + var(--space-sm));
+}
+
+:global(main > section:nth-of-type(3) > div > div > div:last-child > div > p:first-child) {
+  margin-bottom: var(--space-sm);
+}
