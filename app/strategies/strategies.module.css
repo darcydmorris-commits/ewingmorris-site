@@ -1,52 +1,67 @@
-.domainIntro {
-  margin-bottom: var(--space-xl);
-}
-
-.domainStack {
-  display: grid;
-  gap: var(--space-lg);
-}
-
-.domainItem {
+.domainSection {
   max-width: 38em;
-  display: grid;
-  gap: var(--space-sm);
-  padding-top: var(--space-lg);
-  border-top: 1px solid var(--color-border-subtle);
+  padding-top: var(--space-sm);
 }
 
-.domainItem p {
-  color: var(--color-text-secondary);
+.architectureIntro {
+  max-width: 38em;
+}
+
+.architectureFrame {
+  margin-top: var(--space-xl);
+  border-top: 1px solid var(--color-border-subtle);
+  border-bottom: 1px solid var(--color-border-subtle);
+  padding: var(--space-xl) 0;
 }
 
 .architecture {
   display: grid;
   grid-template-columns: repeat(5, minmax(0, 1fr));
-  gap: var(--space-sm);
-  margin-top: var(--space-xl);
+  gap: var(--space-lg);
   align-items: stretch;
 }
 
 .architectureStep {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) auto;
-  gap: var(--space-sm);
-  align-items: center;
-  padding: var(--space-md) 0;
-  border-top: 1px solid var(--color-border-subtle);
-  border-bottom: 1px solid var(--color-border-subtle);
+  grid-template-rows: auto 1fr auto;
+  gap: var(--space-md);
+  align-items: start;
+  padding: 0 var(--space-sm);
+  min-height: 11rem;
+  border-left: 1px solid var(--color-border-subtle);
+}
+
+.architectureStep:first-child {
+  border-left: 0;
+  padding-left: 0;
+}
+
+.architectureStep:last-child {
+  padding-right: 0;
+}
+
+.architectureIndex {
+  font-family: var(--font-sans);
+  font-size: var(--text-caption);
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-text-tertiary);
 }
 
 .architectureStep p {
   margin: 0;
-  font-family: var(--font-sans);
-  font-size: var(--text-small);
-  font-weight: 500;
-  letter-spacing: 0.04em;
+  max-width: 14ch;
+  font-family: var(--font-serif);
+  font-size: var(--text-h3);
+  line-height: var(--leading-tight);
   color: var(--color-heading);
 }
 
 .architectureArrow {
+  align-self: end;
+  font-family: var(--font-sans);
+  font-size: var(--text-small);
   color: var(--color-text-tertiary);
 }
 
@@ -57,9 +72,28 @@
 @media (max-width: 1023px) {
   .architecture {
     grid-template-columns: 1fr;
+    gap: 0;
   }
 
   .architectureStep {
-    grid-template-columns: minmax(0, 1fr) auto;
+    grid-template-columns: auto 1fr auto;
+    grid-template-rows: 1fr;
+    min-height: auto;
+    padding: var(--space-md) 0;
+    border-left: 0;
+    border-top: 1px solid var(--color-border-subtle);
+  }
+
+  .architectureStep:first-child {
+    border-top: 0;
+  }
+
+  .architectureStep p {
+    max-width: none;
+    font-size: var(--text-body-lg);
+  }
+
+  .architectureArrow {
+    align-self: center;
   }
 }
