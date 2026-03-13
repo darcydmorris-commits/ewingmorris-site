@@ -64,7 +64,11 @@ export default function HomePage() {
         <div className="container">
           <ScrollReveal className={styles.heroInner}>
             <div className={styles.heroGrid}>
-              <h1 className={styles.heroHeadline}>Independent, by design.</h1>
+              <h1 className={styles.heroHeadline}>
+                Invest thoughtfully.
+                <br />
+                Build enduring wealth.
+              </h1>
               <p className={styles.heroLead}>
                 Ewing Morris is an independent, employee-owned investment firm based in Toronto. We apply a private-equity mindset to public markets, focusing on opportunities often overlooked by larger institutions.
               </p>
