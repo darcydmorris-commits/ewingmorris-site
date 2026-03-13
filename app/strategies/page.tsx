@@ -43,7 +43,7 @@ export default function StrategiesPage() {
           <Eyebrow>The Ewing Morris Endowment Model</Eyebrow>
           <div className={styles.frameworkSection}>
             <h2 className={styles.frameworkStatement}>
-              Wealth-centered capital allocation across multiple investment domains.
+              <strong>Wealth-centered</strong> capital allocation across multiple investment domains.
             </h2>
 
             <div className={styles.domainRow}>
