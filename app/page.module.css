@@ -34,15 +34,8 @@
   max-width: 28rem;
 }
 
-.heroSecondary {
-  font-size: var(--text-body);
-  color: rgba(255, 255, 255, 0.5);
-  margin-top: var(--space-xl);
-  max-width: 36rem;
-}
-
 .heroActions {
-  margin-top: var(--space-lg);
+  margin-top: var(--space-xl);
   display: flex;
   flex-wrap: wrap;
   gap: var(--space-md);

@@ -20,4 +20,5 @@
   font-family: var(--font-sans);
   font-size: var(--text-small);
   color: var(--color-text-tertiary);
+  white-space: pre-line;
 }

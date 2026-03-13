@@ -66,14 +66,11 @@ export default function HomePage() {
             <div className={styles.heroGrid}>
               <h1 className={styles.heroHeadline}>Independent, by design.</h1>
               <p className={styles.heroLead}>
-                Independent, employee-owned investment firm in Toronto for families and select institutions across public markets, credit, and select real assets.
+                Ewing Morris is an independent, employee-owned investment firm based in Toronto. We apply a private-equity mindset to public markets, focusing on opportunities often overlooked by larger institutions.
               </p>
             </div>
-            <p className={styles.heroSecondary}>
-              Founded in 2011, Ewing Morris manages nearly $1 billion with a private equity mindset and direct senior partnership.
-            </p>
             <div className={styles.heroActions}>
-              <a href="/contact" className={styles.heroPrimaryCta}>Start a conversation</a>
+              <a href="/strategies" className={styles.heroPrimaryCta}>How we invest</a>
             </div>
           </ScrollReveal>
         </div>
@@ -141,7 +138,7 @@ export default function HomePage() {
         <ScrollReveal>
           <Eyebrow>Insights</Eyebrow>
           <div className={styles.sectionIntro}>
-            <h2>What we're thinking about.</h2>
+            <h2>Insights</h2>
           </div>
           <div className={styles.insightsList}>
             {insights.map((item) => (
@@ -163,7 +160,7 @@ export default function HomePage() {
         <ScrollReveal>
           <Blockquote
             quote="Our aim is to create an investment firm we would want to be clients of."
-            attribution="John Ewing & Darcy Morris, Co-Founders"
+            attribution={`John Ewing and Darcy Morris\nCo-Founders`}
           />
           <div className={styles.darkAction}>
             <Button href="/team" variant="link">Meet the team</Button>
