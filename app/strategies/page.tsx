@@ -1,50 +1,86 @@
 import type { Metadata } from "next";
 import { Button } from "@/components/Button";
-import { CardElevated } from "@/components/CardElevated";
 import { Eyebrow } from "@/components/Eyebrow";
 import { PageHeader } from "@/components/PageHeader";
 import { ScrollReveal } from "@/components/ScrollReveal";
 import { SectionWrapper } from "@/components/SectionWrapper";
 import shared from "@/app/interior.module.css";
+import styles from "./strategies.module.css";
 
 export const metadata: Metadata = {
-  title: "Strategies",
-  description: "Ewing Morris strategies across small and mid-cap equities, high-yield credit, long-short equity, special situations, and select real assets.",
+  title: "How We Invest",
+  description:
+    "Learn how Ewing Morris approaches capital allocation across public equities, credit, shareholder engagement, co-investments, and selective real assets.",
 };
 
-const strategyCards = [
-  ["Small & Mid-Cap Equities", "Opportunities Fund", "Inception: September 2011. Global/NA equities, compounders + catalyst + selective short selling. The portfolio is concentrated-typically 15-25 core positions-long-biased with selective short exposure, and managed with a long-term orientation."],
-  ["Small & Mid-Cap Equities", "Small Cap Fund", "Inception: May 2015. North American small-cap compounders + catalyst. Focused on the least efficient part of the public equity market: companies too small for institutional coverage but too complex for retail investors."],
-  ["High-Yield Credit", "Flexible Fixed Income Fund", "Inception: February 2016. Capital preservation, 5-7% target, high yield + equity short hedge. Credit investing starts with underwriting and downside, not yield in isolation."],
-  ["Long-Short Equity", "Dark Horse Fund", "Inception: April 2009. Low-net market exposure long-short strategy in North American small-cap companies. Designed to generate returns with limited directionality relative to broader equity markets."],
-  ["Multi-Strategy", "Partners Fund", "Wraps core strategies into a single, diversified allocation for private clients. Combines the Offensive Playbook (equities), the Defensive Playbook (fixed income), and the Neutral Zone Playbook (long-short)."],
-  ["Special Situations", "Co-Investment SPVs", "PE-like co-investments in public or private opportunities where concentrated capital, active engagement, or structural expertise can drive outsized returns. Participation by invitation."],
+const architectureSteps = [
+  "Clients",
+  "Ewing Morris Wealth",
+  "Capital Allocation",
+  "Internal Strategies + External Managers",
+  "Investment Domains",
+] as const;
+
+const domainItems = [
+  {
+    eyebrow: "Public Equities",
+    title: "Concentrated ownership in less efficient markets.",
+    body: "We spend most of our time in small and mid-cap companies where original research still matters. The work begins with business quality, capital allocation, and downside. From there, we look for either durable compounders or situations where a catalyst can close the gap between price and value.",
+  },
+  {
+    eyebrow: "Credit",
+    title: "Underwriting first, yield second.",
+    body: "Credit is useful when it is treated as credit rather than as a substitute for equity. We focus on underwriting, structure, asset coverage, and the path through a difficult environment. Capital preservation matters at least as much as coupon.",
+  },
+  {
+    eyebrow: "Shareholder Engagement & Special Situations",
+    title: "A willingness to engage when stewardship is required.",
+    body: "When governance, capital allocation, or strategy are standing in the way of value, we are prepared to do more than observe. That can mean private engagement, public activism, special situations, or board-level work where we believe the facts support it.",
+  },
+  {
+    eyebrow: "Co-Investments",
+    title: "Special purpose vehicles for specific opportunities.",
+    body: "Some opportunities are best pursued with dedicated capital rather than inside a broad pool. In those cases, we may structure co-investments or SPVs for a defined idea, timeline, and risk profile. The aim is precision, not product proliferation.",
+  },
+  {
+    eyebrow: "Real Assets",
+    title: "Selective exposure where the economics are durable.",
+    body: "Our real asset work is highly selective. Today that includes niche multi-family residential properties in the greater New York City area through a joint venture with Patoma Inc. We view real assets as a complement to public markets, not a style allocation in search of marketing language.",
+  },
 ] as const;
 
 export default function StrategiesPage() {
   return (
     <main>
       <PageHeader
-        eyebrow="Strategies"
-        title="A private equity mindset applied to public markets."
-        lead="We invest in areas where patience, research, and conviction create an edge that scale and speed cannot replicate. Our strategies operate in the less efficient corners of North American capital markets-small and mid-cap equities, high-yield credit, activism and special situations, and select real assets."
+        eyebrow="How We Invest"
+        title="Capital allocation before products."
+        lead="Ewing Morris begins with clients, capital, and the job that portfolio construction is meant to do. Strategies matter, but only in the context of the balance sheet they serve and the opportunities that justify them."
       />
 
       <SectionWrapper narrow>
         <ScrollReveal>
-          <p>Every strategy shares a common discipline: concentrated portfolios, deep fundamental research, capital preservation, and alignment through co-investment. We'd rather own 15 things we understand deeply than 150 things we've screened.</p>
+          <p>
+            Wealth comes first. For private clients, families, and select institutions, the question is not which fund sits on a shelf. It is how capital should be allocated across public markets, credit, engagement-driven situations, co-investments, and selective real assets so the whole portfolio is more resilient, more intentional, and more aligned with long-term objectives.
+          </p>
         </ScrollReveal>
       </SectionWrapper>
 
       <SectionWrapper muted>
         <ScrollReveal>
-          <div className={shared.twoColumn}>
-            {strategyCards.map(([eyebrow, title, description]) => (
-              <CardElevated key={title}>
-                <Eyebrow>{eyebrow}</Eyebrow>
-                <h3>{title}</h3>
-                <p>{description}</p>
-              </CardElevated>
+          <Eyebrow>Public Equities</Eyebrow>
+          <div className={`${shared.sectionIntro} ${styles.domainIntro}`}>
+            <h2>Public markets, approached like business ownership.</h2>
+            <p>
+              We are drawn to areas of the equity market that are too small, too complex, or too out-of-favour for larger institutions to study carefully. The advantage is not speed. It is time, concentration, and a willingness to understand a business more deeply than the market does.
+            </p>
+          </div>
+          <div className={styles.domainStack}>
+            {domainItems.slice(0, 1).map((item) => (
+              <div key={item.eyebrow} className={styles.domainItem}>
+                <h3>{item.title}</h3>
+                <p>{item.body}</p>
+              </div>
             ))}
           </div>
         </ScrollReveal>
@@ -52,20 +88,105 @@ export default function StrategiesPage() {
 
       <SectionWrapper>
         <ScrollReveal>
-          <Eyebrow>Real Assets</Eyebrow>
-          <div className={shared.sectionIntro}>
-            <h2>Niche multi-family real estate.</h2>
-            <p>Through a joint venture with Patoma Inc., we invest in niche multi-family residential properties in the greater New York City area. This strategy provides exposure to real assets with income characteristics that complement our public market portfolios.</p>
+          <Eyebrow>Credit</Eyebrow>
+          <div className={styles.domainStack}>
+            {domainItems.slice(1, 2).map((item) => (
+              <div key={item.eyebrow} className={styles.domainItem}>
+                <h2>{item.title}</h2>
+                <p>{item.body}</p>
+              </div>
+            ))}
           </div>
         </ScrollReveal>
       </SectionWrapper>
 
-      <SectionWrapper dark>
+      <SectionWrapper muted>
+        <ScrollReveal>
+          <Eyebrow>Shareholder Engagement &amp; Special Situations</Eyebrow>
+          <div className={styles.domainStack}>
+            {domainItems.slice(2, 3).map((item) => (
+              <div key={item.eyebrow} className={styles.domainItem}>
+                <h2>{item.title}</h2>
+                <p>{item.body}</p>
+              </div>
+            ))}
+          </div>
+        </ScrollReveal>
+      </SectionWrapper>
+
+      <SectionWrapper>
+        <ScrollReveal>
+          <Eyebrow>Co-Investments</Eyebrow>
+          <div className={styles.domainStack}>
+            {domainItems.slice(3, 4).map((item) => (
+              <div key={item.eyebrow} className={styles.domainItem}>
+                <h2>{item.title}</h2>
+                <p>{item.body}</p>
+              </div>
+            ))}
+          </div>
+        </ScrollReveal>
+      </SectionWrapper>
+
+      <SectionWrapper muted>
+        <ScrollReveal>
+          <Eyebrow>Real Assets</Eyebrow>
+          <div className={styles.domainStack}>
+            {domainItems.slice(4).map((item) => (
+              <div key={item.eyebrow} className={styles.domainItem}>
+                <h2>{item.title}</h2>
+                <p>{item.body}</p>
+              </div>
+            ))}
+          </div>
+        </ScrollReveal>
+      </SectionWrapper>
+
+      <SectionWrapper>
+        <ScrollReveal>
+          <Eyebrow>Architecture</Eyebrow>
+          <div className={shared.sectionIntro}>
+            <h2>How these capabilities fit together.</h2>
+            <p>
+              The structure is simple. Clients come first. Wealth management provides the decision-making framework. Capital is then allocated across internal strategies and, where appropriate, external managers. The underlying domains are tools within that architecture, not a collection of products competing for attention.
+            </p>
+          </div>
+          <div className={styles.architecture}>
+            {architectureSteps.map((step, index) => (
+              <div key={step} className={styles.architectureStep}>
+                <p>{step}</p>
+                {index < architectureSteps.length - 1 ? (
+                  <span className={styles.architectureArrow} aria-hidden="true">
+                    →
+                  </span>
+                ) : null}
+              </div>
+            ))}
+          </div>
+        </ScrollReveal>
+      </SectionWrapper>
+
+      <SectionWrapper muted>
+        <ScrollReveal>
+          <div className={`${shared.sectionIntro} ${styles.fitSection}`}>
+            <Eyebrow>Integration</Eyebrow>
+            <h2>One philosophy, expressed through different forms of capital.</h2>
+            <p>
+              The common thread across equities, credit, engagement, co-investments, and real assets is judgment. We prefer focused exposures, careful underwriting, and situations where patience is an advantage. For wealth clients, these capabilities matter because they expand the menu of sensible choices without turning the relationship into product distribution.
+            </p>
+          </div>
+        </ScrollReveal>
+      </SectionWrapper>
+
+      <SectionWrapper>
         <ScrollReveal>
           <div className={shared.sectionIntro}>
-            <p>Our strategies are available to accredited investors who meet applicable suitability requirements.</p>
+            <h2>See how it fits within wealth.</h2>
+            <p>
+              Ewing Morris Wealth is where these capabilities are turned into an actual client portfolio: tax-aware, balanced against liquidity needs, and shaped around the family or institution the capital belongs to.
+            </p>
           </div>
-          <Button href="/contact">Start a conversation</Button>
+          <Button href="/wealth-management">Explore Wealth Management</Button>
         </ScrollReveal>
       </SectionWrapper>
     </main>
