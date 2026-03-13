@@ -66,6 +66,18 @@
   color: var(--color-bg-deep);
 }
 
+.clientSection {
+  display: grid;
+  gap: var(--space-xl);
+  max-width: 42rem;
+}
+
+.clientActions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-md);
+}
+
 .pathsGrid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));

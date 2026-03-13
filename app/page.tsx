@@ -80,6 +80,25 @@ export default function HomePage() {
         </div>
       </section>
 
+      <SectionWrapper>
+        <ScrollReveal>
+          <div className={styles.clientSection}>
+            <div className={styles.sectionIntro}>
+              <h2>How we work with clients</h2>
+              <p>Most investment firms start with products.</p>
+              <p>We start with the client balance sheet.</p>
+              <p>
+                Ewing Morris Wealth helps families and institutions allocate capital thoughtfully across public markets, private opportunities, external managers, and the firm's internal strategies.
+              </p>
+            </div>
+            <div className={styles.clientActions}>
+              <Button href="/wealth-management" variant="secondary">Wealth</Button>
+              <Button href="/strategies" variant="secondary">How We Invest</Button>
+            </div>
+          </div>
+        </ScrollReveal>
+      </SectionWrapper>
+
       <SectionWrapper muted>
         <ScrollReveal>
           <Eyebrow>How the firm works</Eyebrow>
