@@ -13,12 +13,12 @@ export const metadata: Metadata = {
     "Learn how Ewing Morris approaches capital allocation across public equities, credit, shareholder engagement, co-investments, and selective real assets.",
 };
 
-const architectureSteps = [
-  "Clients / Families / Institutions",
-  "Ewing Morris Wealth",
-  "Capital Allocation",
-  "Internal Strategies + External Managers",
-  "Investment Domains",
+const architectureDomains = [
+  "Public Equities",
+  "Credit",
+  "Shareholder Engagement",
+  "Special Situations / SPVs",
+  "External Managers",
 ] as const;
 
 export default function StrategiesPage() {
@@ -35,6 +35,33 @@ export default function StrategiesPage() {
           <p>
             For families, private clients, and select institutions, the question is not which fund sits on a shelf. It is how capital should be allocated across public equities, credit, engagement-driven situations, co-investments, and selective real assets to build a more resilient and intentional portfolio.
           </p>
+        </ScrollReveal>
+      </SectionWrapper>
+
+      <SectionWrapper>
+        <ScrollReveal>
+          <Eyebrow>Architecture</Eyebrow>
+          <div className={`${shared.sectionIntro} ${styles.architectureIntro}`}>
+            <h2>How the platform is organized.</h2>
+            <p>
+              Wealth is the hub. Capital allocation is the decision-making layer. The underlying domains are tools within that structure, used where they are most useful to the client balance sheet.
+            </p>
+          </div>
+          <div className={styles.platformDiagram}>
+            <div className={styles.platformNode}>Clients</div>
+            <div className={styles.platformConnector} aria-hidden="true" />
+            <div className={`${styles.platformNode} ${styles.platformHub}`}>Ewing Morris Wealth</div>
+            <div className={styles.platformConnector} aria-hidden="true" />
+            <div className={styles.platformNode}>Capital Allocation Engine</div>
+            <div className={styles.platformConnector} aria-hidden="true" />
+            <div className={styles.platformDomains}>
+              {architectureDomains.map((domain) => (
+                <div key={domain} className={styles.platformDomain}>
+                  {domain}
+                </div>
+              ))}
+            </div>
+          </div>
         </ScrollReveal>
       </SectionWrapper>
 
@@ -94,33 +121,6 @@ export default function StrategiesPage() {
             <p>
               Today that includes niche multi-family residential properties in the greater New York City area through a joint venture with Patoma Inc. We view real assets as a complement to public markets, pursued selectively and only where the underlying economics are compelling.
             </p>
-          </div>
-        </ScrollReveal>
-      </SectionWrapper>
-
-      <SectionWrapper>
-        <ScrollReveal>
-          <Eyebrow>Architecture</Eyebrow>
-          <div className={`${shared.sectionIntro} ${styles.architectureIntro}`}>
-            <h2>How these capabilities fit together.</h2>
-            <p>
-              Clients come first. Wealth management provides the framework. Capital is then allocated across internal strategies and, where appropriate, external managers. The domains below are tools within that architecture, not products competing for attention.
-            </p>
-          </div>
-          <div className={styles.architectureFrame}>
-            <div className={styles.architecture}>
-              {architectureSteps.map((step, index) => (
-                <div key={step} className={styles.architectureStep}>
-                  <span className={styles.architectureIndex}>{`0${index + 1}`}</span>
-                  <p>{step}</p>
-                  {index < architectureSteps.length - 1 ? (
-                    <span className={styles.architectureArrow} aria-hidden="true">
-                      ↓
-                    </span>
-                  ) : null}
-                </div>
-              ))}
-            </div>
           </div>
         </ScrollReveal>
       </SectionWrapper>

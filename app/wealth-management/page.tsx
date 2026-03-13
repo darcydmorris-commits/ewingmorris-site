@@ -65,6 +65,34 @@ const relationshipCards = [
   ],
 ] as const;
 
+const serviceStages = [
+  {
+    number: "01",
+    title: "Discovery",
+    description: "Understand family history, goals, concerns, constraints, and communication preferences.",
+  },
+  {
+    number: "02",
+    title: "Proposal",
+    description: "Develop the initial capital allocation framework, identify key issues, and define priorities.",
+  },
+  {
+    number: "03",
+    title: "First 30 Days",
+    description: "Onboarding, account transitions, balance-sheet mapping, tax and liquidity review.",
+  },
+  {
+    number: "04",
+    title: "First 90 Days",
+    description: "Portfolio implementation, external manager review, opportunity set review, reporting cadence.",
+  },
+  {
+    number: "05",
+    title: "Ongoing Partnership",
+    description: "Quarterbacking, coordination with advisers, periodic reviews, family priorities, and new opportunities.",
+  },
+] as const;
+
 const clientItems = [
   "liquidity events such as selling a business",
   "accumulating significant concentrated positions",
@@ -150,6 +178,28 @@ export default function WealthManagementPage() {
           <div>
             {relationshipCards.map(([number, title, description]) => (
               <Card key={number} number={number} title={title} description={description} />
+            ))}
+          </div>
+        </ScrollReveal>
+      </SectionWrapper>
+
+      <SectionWrapper>
+        <ScrollReveal>
+          <Eyebrow>How the Relationship Begins</Eyebrow>
+          <div className={`${shared.sectionIntro} ${styles.serviceIntro}`}>
+            <h2>How the relationship begins</h2>
+            <p>
+              A deliberate process for understanding the balance sheet, clarifying priorities, and building the right long-term architecture.
+            </p>
+          </div>
+          <div className={styles.serviceJourney}>
+            {serviceStages.map((stage, index) => (
+              <div key={stage.title} className={styles.serviceStage}>
+                <span className={styles.serviceIndex}>{stage.number}</span>
+                <h3>{stage.title}</h3>
+                <p>{stage.description}</p>
+                {index < serviceStages.length - 1 ? <span className={styles.serviceConnector} aria-hidden="true" /> : null}
+              </div>
             ))}
           </div>
         </ScrollReveal>

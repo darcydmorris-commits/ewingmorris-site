@@ -7,61 +7,49 @@
   max-width: 38em;
 }
 
-.architectureFrame {
+.platformDiagram {
+  display: grid;
+  gap: var(--space-md);
   margin-top: var(--space-2xl);
+}
+
+.platformNode,
+.platformDomain {
   border: 1px solid var(--color-border-subtle);
-  padding: var(--space-xl) var(--space-lg);
-}
-
-.architecture {
-  display: grid;
-  grid-template-columns: repeat(5, minmax(0, 1fr));
-  gap: 0;
-  align-items: stretch;
-}
-
-.architectureStep {
-  display: grid;
-  grid-template-rows: auto 1fr auto;
-  gap: var(--space-lg);
-  align-items: start;
-  padding: 0 var(--space-md);
-  min-height: 11.5rem;
-  border-left: 1px solid var(--color-border-subtle);
-}
-
-.architectureStep:first-child {
-  border-left: 0;
-  padding-left: 0;
-}
-
-.architectureStep:last-child {
-  padding-right: 0;
-}
-
-.architectureIndex {
-  font-family: var(--font-sans);
-  font-size: var(--text-caption);
-  font-weight: 500;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: var(--color-text-tertiary);
-}
-
-.architectureStep p {
-  margin: 0;
-  max-width: 14ch;
-  font-family: var(--font-serif);
-  font-size: var(--text-h3);
-  line-height: var(--leading-tight);
-  color: var(--color-heading);
-}
-
-.architectureArrow {
-  align-self: end;
+  padding: var(--space-md) var(--space-lg);
   font-family: var(--font-sans);
   font-size: var(--text-small);
-  color: var(--color-text-tertiary);
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  color: var(--color-heading);
+  background: var(--color-bg-elevated);
+  transition: border-color 0.2s ease, color 0.2s ease;
+}
+
+.platformNode:hover,
+.platformDomain:hover {
+  border-color: var(--color-accent);
+  color: var(--color-accent);
+}
+
+.platformHub {
+  font-family: var(--font-serif);
+  font-size: var(--text-h3);
+  font-weight: 400;
+  letter-spacing: 0;
+}
+
+.platformConnector {
+  width: 1px;
+  height: 2rem;
+  margin-left: calc(var(--space-lg) + 1px);
+  background: var(--color-border);
+}
+
+.platformDomains {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: var(--space-sm);
 }
 
 .fitSection {
@@ -69,34 +57,7 @@
 }
 
 @media (max-width: 1023px) {
-  .architectureFrame {
-    padding: var(--space-lg);
-  }
-
-  .architecture {
+  .platformDomains {
     grid-template-columns: 1fr;
-  }
-
-  .architectureStep {
-    grid-template-columns: auto 1fr auto;
-    grid-template-rows: 1fr;
-    gap: var(--space-md);
-    min-height: auto;
-    padding: var(--space-md) 0;
-    border-left: 0;
-    border-top: 1px solid var(--color-border-subtle);
-  }
-
-  .architectureStep:first-child {
-    border-top: 0;
-  }
-
-  .architectureStep p {
-    max-width: none;
-    font-size: var(--text-body-lg);
-  }
-
-  .architectureArrow {
-    align-self: center;
   }
 }
