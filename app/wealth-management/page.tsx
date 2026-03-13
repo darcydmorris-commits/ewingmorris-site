@@ -87,7 +87,7 @@ export default function WealthManagementPage() {
             <p>
               The work goes beyond selecting investments. It involves thinking about the entire balance sheet - public markets, private opportunities, taxes, liquidity, and the role capital plays within a family's life.
             </p>
-            <p>Our role is to help clients allocate capital thoughtfully across all of it.</p>
+            <p>Our role is to help clients allocate capital thoughtfully across the whole balance sheet.</p>
           </div>
         </ScrollReveal>
       </SectionWrapper>
@@ -145,7 +145,7 @@ export default function WealthManagementPage() {
         <ScrollReveal>
           <Eyebrow>Who This Is For</Eyebrow>
           <div className={`${shared.sectionIntro} ${styles.sectionBlock}`}>
-            <h2>Who we typically work with.</h2>
+            <h2>Who this is for.</h2>
             <p>
               Ewing Morris Wealth typically works with families and individuals with investable assets ranging from approximately $1 million to $50 million and above.
             </p>
@@ -170,7 +170,7 @@ export default function WealthManagementPage() {
             <Eyebrow>Closing</Eyebrow>
             <h2>One philosophy, expressed through different forms of capital.</h2>
             <p>
-              Ewing Morris Wealth integrates low-cost market exposure, internal investment strategies, external managers, and opportunistic investments into a single coherent portfolio.
+              Ewing Morris Wealth integrates low-cost market exposure, internal investment strategies, external managers, and opportunistic investments into a coherent portfolio.
             </p>
             <p>
               The objective is simple: to help families allocate capital thoughtfully and steward wealth responsibly over the long term.

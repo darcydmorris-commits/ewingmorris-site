@@ -4,7 +4,7 @@ import styles from "./Footer.module.css";
 
 const footerLinks = [
   { href: "/about", label: "About" },
-  { href: "/strategies", label: "Strategies" },
+  { href: "/strategies", label: "How We Invest" },
   { href: "/team", label: "Team" },
   { href: "/insights", label: "Insights" },
   { href: "/legal", label: "Legal" },
