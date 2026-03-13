@@ -74,7 +74,7 @@ export default function HomePage() {
               </p>
             </div>
             <div className={styles.heroActions}>
-              <a href="/strategies" className={styles.heroPrimaryCta}>How we invest</a>
+              <a href="/contact" className={styles.heroPrimaryCta}>Request a Private Consultation</a>
             </div>
           </ScrollReveal>
         </div>
