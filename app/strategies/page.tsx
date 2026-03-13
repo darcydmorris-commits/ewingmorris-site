@@ -44,10 +44,8 @@ export default function StrategiesPage() {
           <div className={`${shared.sectionIntro} ${styles.architectureIntro}`}>
             <h2>The Ewing Morris Endowment Model</h2>
             <p>A wealth-centered approach to capital allocation across multiple investment domains.</p>
-            <p>
-              Clients hire the firm through Wealth relationships. Capital allocation is the core work. The investment domains below are different expressions of the same philosophy.
-            </p>
           </div>
+
           <div className={styles.frameworkPlate}>
             <div className={styles.frameworkClientsBand}>
               <div className={styles.clientModule}>Clients</div>
@@ -68,6 +66,12 @@ export default function StrategiesPage() {
                 ))}
               </div>
             </div>
+          </div>
+
+          <div className={styles.frameworkSupport}>
+            <p>
+              Clients hire the firm through Wealth relationships. Capital allocation is the core work of the firm. The investment domains are tools used according to the needs of the balance sheet.
+            </p>
           </div>
         </ScrollReveal>
       </SectionWrapper>
