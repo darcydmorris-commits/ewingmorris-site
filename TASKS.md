@@ -44,7 +44,7 @@ Focus:
 
 
 
-\### 2. Run site-wide typography consistency pass
+\### 2. Run site-wide typography consistency pass [Complete]
 
 Check:
 

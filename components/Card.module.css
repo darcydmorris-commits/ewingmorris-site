@@ -1,4 +1,6 @@
 .card {
+  display: grid;
+  gap: var(--space-xs);
   padding: var(--space-lg) 0;
   border-top: 1px solid var(--color-border-subtle);
 }
@@ -13,10 +15,10 @@
 }
 
 .title {
-  margin-top: var(--space-xs);
+  max-width: 24ch;
 }
 
 .description {
-  margin-top: var(--space-xs);
+  max-width: 40rem;
   color: var(--color-text-secondary);
 }

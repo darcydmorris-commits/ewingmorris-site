@@ -130,6 +130,7 @@ h2 {
   font-family: var(--font-serif);
   font-weight: 400;
   color: var(--color-heading);
+  text-wrap: balance;
 }
 
 h1 {
@@ -148,12 +149,13 @@ h3 {
   font-family: var(--font-sans);
   font-size: var(--text-h3);
   font-weight: 500;
-  line-height: var(--leading-heading);
+  line-height: 1.35;
   color: var(--color-heading);
+  text-wrap: balance;
 }
 
 p {
-  max-width: 38em;
+  max-width: 36em;
 }
 
 p + p {

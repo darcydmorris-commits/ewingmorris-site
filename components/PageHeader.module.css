@@ -7,14 +7,16 @@
 .inner {
   display: grid;
   gap: var(--space-sm);
+  max-width: 46rem;
 }
 
 .title {
-  max-width: 20ch;
+  max-width: 18ch;
 }
 
 .lead {
   margin-top: var(--space-md);
+  max-width: 40rem;
   font-size: var(--text-body-lg);
   color: var(--color-text-secondary);
 }

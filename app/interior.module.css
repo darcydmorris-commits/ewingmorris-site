@@ -11,10 +11,16 @@
 
 .sectionIntro {
   display: grid;
-  gap: var(--space-md);
+  gap: 0.875rem;
+  max-width: 42rem;
+}
+
+.sectionIntro h2 {
+  max-width: 18ch;
 }
 
 .sectionIntro p {
+  max-width: 36rem;
   color: var(--color-text-secondary);
 }
 
@@ -60,12 +66,15 @@
   border: 0;
   background: var(--color-heading);
   color: var(--color-text-inverse);
-  padding: 0.875rem 2rem;
+  min-height: 3.25rem;
+  padding: 0.875rem 1.75rem;
   font-family: var(--font-sans);
   font-size: var(--text-small);
   font-weight: 500;
   text-transform: uppercase;
   letter-spacing: 0.06em;
+  text-decoration: none;
+  transition: color 0.2s ease, background-color 0.2s ease, border-color 0.2s ease;
 }
 
 .subscribeButton:hover {
@@ -97,7 +106,7 @@
   display: grid;
   grid-template-columns: 5rem minmax(0, 1fr);
   gap: var(--space-lg);
-  padding: var(--space-lg) 0;
+  padding: calc(var(--space-lg) + var(--space-xs)) 0;
   border-top: 1px solid var(--color-border-subtle);
 }
 
