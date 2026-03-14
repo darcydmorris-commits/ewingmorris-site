@@ -1,5 +1,5 @@
 .section {
-  padding: var(--section-pad) 0;
+  padding: calc(var(--section-pad) + var(--space-xs)) 0;
 }
 
 .muted {

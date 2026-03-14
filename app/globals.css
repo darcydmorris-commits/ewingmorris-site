@@ -84,14 +84,17 @@ body {
 a {
   color: var(--color-link, var(--color-heading));
   text-decoration: underline;
+  text-decoration-thickness: 1px;
   text-underline-offset: 0.15em;
   text-decoration-color: var(--color-border);
-  transition: color 200ms ease, border-color 200ms ease, text-decoration-color 200ms ease;
+  transition: color 200ms ease, border-color 200ms ease, text-decoration-color 200ms ease, text-underline-offset 200ms ease, text-decoration-thickness 200ms ease;
 }
 
 a:hover {
   color: var(--color-accent);
   text-decoration-color: var(--color-accent);
+  text-underline-offset: 0.22em;
+  text-decoration-thickness: 1.5px;
 }
 
 button,

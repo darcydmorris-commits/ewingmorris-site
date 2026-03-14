@@ -38,6 +38,7 @@
   gap: var(--space-xs);
   padding: calc(var(--space-lg) + var(--space-xs)) 0;
   border-bottom: 1px solid var(--color-border-subtle);
+  transition: transform 180ms ease, filter 180ms ease, border-color 180ms ease;
 }
 
 .date,
@@ -53,4 +54,13 @@
 
 .description {
   color: var(--color-text-secondary);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .row:hover,
+  .row:focus-within {
+    transform: translateY(-2px);
+    filter: drop-shadow(0 10px 18px rgba(27, 31, 35, 0.06));
+    border-color: color-mix(in srgb, var(--color-border-subtle) 70%, var(--color-heading) 30%);
+  }
 }

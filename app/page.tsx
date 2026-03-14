@@ -71,7 +71,7 @@ export default function HomePage() {
                   Build enduring wealth.
                 </h1>
                 <p className={styles.heroClarifier}>
-                  Ewing Morris helps families and institutions allocate capital thoughtfully across public markets, private opportunities, and selective internal strategies.
+                  Ewing Morris allocates capital for families, entrepreneurs, and select institutions across public equities, credit, shareholder engagement, special situations, and carefully selected external managers.
                 </p>
               </div>
               <p className={styles.heroLead}>
@@ -88,12 +88,18 @@ export default function HomePage() {
       <SectionWrapper>
         <ScrollReveal>
           <div className={styles.clientSection}>
+            <div className={styles.philosophyStatement}>
+              <p>
+                Ewing Morris approaches investing as a capital allocation discipline. The objective is to deploy capital where the opportunity, risk, and structure are most compelling.
+              </p>
+            </div>
             <div className={styles.sectionIntro}>
               <h2>How we work with clients</h2>
-              <p>Most investment firms start with products.</p>
-              <p>We start with the client balance sheet.</p>
               <p>
-                Ewing Morris Wealth helps families and institutions allocate capital thoughtfully across public markets, private opportunities, external managers, and the firm's internal strategies.
+                Most investment firms begin with products. We begin with the client's objectives, constraints, and capital base.
+              </p>
+              <p>
+                From there, Ewing Morris Wealth allocates across public markets, private opportunities, external managers, and the firm's internal strategies.
               </p>
             </div>
             <div className={styles.clientActions}>
@@ -110,7 +116,7 @@ export default function HomePage() {
           <div className={styles.sectionIntro}>
             <h2>One philosophy. Two expressions.</h2>
             <p>
-              The same discipline runs through the whole firm: independent thinking, concentrated work where the edge is real, and relationships built around judgment rather than distribution.
+              The same discipline runs through the firm: independent thinking, careful underwriting, and capital allocated where the opportunity justifies the risk.
             </p>
           </div>
           <ScrollReveal stagger className={styles.pathsGrid}>
