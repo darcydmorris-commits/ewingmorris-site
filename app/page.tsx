@@ -113,7 +113,7 @@ export default function HomePage() {
               The same discipline runs through the whole firm: independent thinking, concentrated work where the edge is real, and relationships built around judgment rather than distribution.
             </p>
           </div>
-          <div className={styles.pathsGrid}>
+          <ScrollReveal stagger className={styles.pathsGrid}>
             {paths.map((path) => (
               <div key={path.title} className={styles.pathColumn}>
                 <h3 className={styles.pathTitle}>{path.title}</h3>
@@ -121,7 +121,7 @@ export default function HomePage() {
                 <Button href={path.href} variant="link">{path.cta}</Button>
               </div>
             ))}
-          </div>
+          </ScrollReveal>
         </ScrollReveal>
       </SectionWrapper>
 
@@ -134,7 +134,7 @@ export default function HomePage() {
               Independence is not a positioning line. It is the operating condition that makes the firm's work possible.
             </p>
           </div>
-          <div className={styles.independenceGrid}>
+          <ScrollReveal stagger className={styles.independenceGrid}>
             <div className={styles.independenceItem}>
               <p>
                 No captive product shelf. No house view to defend. No pressure to make every client relationship look the same.
@@ -150,7 +150,7 @@ export default function HomePage() {
                 It also changes the client experience. Advice stays direct. Incentives stay aligned. Judgment is not filtered through a distribution model.
               </p>
             </div>
-          </div>
+          </ScrollReveal>
           <div className={styles.sectionAction}>
             <Button href="/about" variant="link">Read the full story</Button>
           </div>
@@ -174,7 +174,7 @@ export default function HomePage() {
           <div className={styles.sectionIntro}>
             <h2>Insights</h2>
           </div>
-          <div className={styles.insightsList}>
+          <ScrollReveal stagger className={styles.insightsList}>
             {insights.map((item) => (
               <article key={item.title} className={styles.insightRow}>
                 <p className={styles.insightMeta}>{item.date}</p>
@@ -183,7 +183,7 @@ export default function HomePage() {
                 <p className={styles.insightDescription}>{item.description}</p>
               </article>
             ))}
-          </div>
+          </ScrollReveal>
           <div className={styles.sectionAction}>
             <Button href="/insights" variant="link">View all</Button>
           </div>

@@ -72,7 +72,7 @@ export default function AboutPage() {
               </div>
             ))}
           </div>
-          <div>
+          <ScrollReveal stagger>
             {historyItems.map((item, index) => (
               <div key={historyYears[index]} className={shared.timelineItem}>
                 <p className={shared.timelineYear}>{historyYears[index]}</p>
@@ -86,7 +86,7 @@ export default function AboutPage() {
                 </p>
               </div>
             ))}
-          </div>
+          </ScrollReveal>
         </ScrollReveal>
       </SectionWrapper>
 

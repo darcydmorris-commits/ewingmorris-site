@@ -15,6 +15,11 @@ export function ScrollReveal({ children, stagger = false, className }: ScrollRev
   const [visible, setVisible] = useState(false);
 
   useEffect(() => {
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      setVisible(true);
+      return;
+    }
+
     const node = ref.current;
     if (!node) {
       return;
@@ -27,7 +32,7 @@ export function ScrollReveal({ children, stagger = false, className }: ScrollRev
           observer.disconnect();
         }
       },
-      { threshold: 0.15 },
+      { threshold: 0.15, rootMargin: "0px 0px -8% 0px" },
     );
 
     observer.observe(node);

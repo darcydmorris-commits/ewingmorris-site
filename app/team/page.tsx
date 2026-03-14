@@ -201,11 +201,11 @@ export default function TeamPage() {
               A small group of partners sets the direction of the firm across investing, wealth relationships, operating discipline, and long-term ownership.
             </p>
           </div>
-          <div className={shared.teamGrid}>
+          <ScrollReveal stagger className={shared.teamGrid}>
             {leadership.map((person) => (
               <TeamCard key={person.name} {...person} />
             ))}
-          </div>
+          </ScrollReveal>
         </ScrollReveal>
       </SectionWrapper>
 
@@ -218,11 +218,11 @@ export default function TeamPage() {
               The investment team brings different lenses to the same task: careful underwriting, original research, and disciplined capital deployment.
             </p>
           </div>
-          <div className={shared.teamGrid}>
+          <ScrollReveal stagger className={shared.teamGrid}>
             {investmentTeam.map((person) => (
               <TeamCard key={person.name} {...person} />
             ))}
-          </div>
+          </ScrollReveal>
         </ScrollReveal>
       </SectionWrapper>
 
@@ -235,11 +235,11 @@ export default function TeamPage() {
               Wealth relationships are sustained by people who can combine portfolio judgment, client partnership, and operational reliability.
             </p>
           </div>
-          <div className={shared.teamGrid}>
+          <ScrollReveal stagger className={shared.teamGrid}>
             {wealthAndOperations.map((person) => (
               <TeamCard key={person.name} {...person} />
             ))}
-          </div>
+          </ScrollReveal>
         </ScrollReveal>
       </SectionWrapper>
 
@@ -252,9 +252,9 @@ export default function TeamPage() {
               The firm also draws on specialist counsel when a situation demands deeper experience in shareholder engagement and contested governance work.
             </p>
           </div>
-          <div className={shared.teamGrid}>
+          <ScrollReveal stagger className={shared.teamGrid}>
             <TeamCard {...advisor} />
-          </div>
+          </ScrollReveal>
         </ScrollReveal>
       </SectionWrapper>
 

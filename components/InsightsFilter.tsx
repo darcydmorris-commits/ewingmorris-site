@@ -1,6 +1,7 @@
 "use client";
 
 import { useMemo, useState } from "react";
+import { ScrollReveal } from "./ScrollReveal";
 import styles from "./InsightsFilter.module.css";
 
 type Entry = {
@@ -45,7 +46,7 @@ export function InsightsFilter({ categories, entries }: InsightsFilterProps) {
           );
         })}
       </div>
-      <div className={styles.list}>
+      <ScrollReveal stagger className={styles.list}>
         {filtered.map((entry) => (
           <article key={`${entry.title}-${entry.category}`} className={styles.row}>
             <p className={styles.date}>{entry.date}</p>
@@ -54,7 +55,7 @@ export function InsightsFilter({ categories, entries }: InsightsFilterProps) {
             <p className={styles.description}>{entry.description}</p>
           </article>
         ))}
-      </div>
+      </ScrollReveal>
     </div>
   );
 }

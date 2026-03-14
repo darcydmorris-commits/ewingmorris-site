@@ -161,11 +161,11 @@ export default function WealthManagementPage() {
           <div className={shared.sectionIntro}>
             <h2>Our approach combines several sources of opportunity.</h2>
           </div>
-          <div>
+          <ScrollReveal stagger>
             {allocationCards.map(([number, title, description]) => (
               <Card key={number} number={number} title={title} description={description} />
             ))}
-          </div>
+          </ScrollReveal>
         </ScrollReveal>
       </SectionWrapper>
 
@@ -175,11 +175,11 @@ export default function WealthManagementPage() {
           <div className={shared.sectionIntro}>
             <h2>Built to feel less like a platform and more like a long-term partnership.</h2>
           </div>
-          <div>
+          <ScrollReveal stagger>
             {relationshipCards.map(([number, title, description]) => (
               <Card key={number} number={number} title={title} description={description} />
             ))}
-          </div>
+          </ScrollReveal>
         </ScrollReveal>
       </SectionWrapper>
 
@@ -192,7 +192,7 @@ export default function WealthManagementPage() {
               A deliberate process for understanding a family's balance sheet, priorities, and long-term objectives.
             </p>
           </div>
-          <div className={styles.serviceJourney}>
+          <ScrollReveal stagger className={styles.serviceJourney}>
             {serviceStages.map((stage, index) => (
               <div key={stage.title} className={styles.serviceStage}>
                 <span className={styles.serviceIndex}>{stage.number}</span>
@@ -201,7 +201,7 @@ export default function WealthManagementPage() {
                 {index < serviceStages.length - 1 ? <span className={styles.serviceConnector} aria-hidden="true" /> : null}
               </div>
             ))}
-          </div>
+          </ScrollReveal>
         </ScrollReveal>
       </SectionWrapper>
 
