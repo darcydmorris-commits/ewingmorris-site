@@ -30,11 +30,18 @@
 .groupIntro {
   display: grid;
   gap: var(--space-sm);
-  max-width: 38em;
-  margin-bottom: var(--space-xl);
+  max-width: 44rem;
+  margin-bottom: calc(var(--space-xl) + var(--space-sm));
+}
+
+.groupIntro h2 {
+  max-width: 18ch;
+  font-size: clamp(1.75rem, 2.2vw, 2.375rem);
+  line-height: 1.08;
 }
 
 .groupIntro p {
+  max-width: 36rem;
   color: var(--color-text-secondary);
 }
 
@@ -80,5 +87,14 @@
   .closingLine {
     margin: 0;
     text-align: left;
+  }
+
+  .groupIntro {
+    margin-bottom: var(--space-lg);
+  }
+
+  .groupIntro h2,
+  .groupIntro p {
+    max-width: none;
   }
 }

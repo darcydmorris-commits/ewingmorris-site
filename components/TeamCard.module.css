@@ -1,31 +1,38 @@
 .card {
   display: grid;
   gap: var(--space-sm);
+  align-content: start;
+  padding-top: var(--space-lg);
+  border-top: 1px solid var(--color-border-subtle);
 }
 
 .placeholder {
+  width: 4.5rem;
   aspect-ratio: 1;
   display: grid;
   place-items: center;
   background: var(--color-bg-muted);
+  border: 1px solid var(--color-border-subtle);
 }
 
 .initials {
   font-family: var(--font-serif);
-  font-size: var(--text-h2);
+  font-size: clamp(1.5rem, 2vw, 1.875rem);
   color: var(--color-heading);
 }
 
 .name {
-  margin-top: var(--space-sm);
+  margin-top: var(--space-xs);
 }
 
 .title {
   font-size: var(--text-small);
+  font-weight: 500;
   color: var(--color-text-secondary);
 }
 
 .focus {
+  margin-top: calc(var(--space-xs) * -1);
   font-size: var(--text-small);
   color: var(--color-text-tertiary);
   font-style: italic;
@@ -38,6 +45,7 @@
 
 .bio {
   color: var(--color-text);
+  max-width: 42rem;
 }
 
 .tagline {
@@ -48,6 +56,7 @@
 
 .email {
   width: fit-content;
+  margin-top: var(--space-xs);
   font-size: var(--text-small);
   text-decoration: none;
   border-bottom: 1px solid var(--color-border);

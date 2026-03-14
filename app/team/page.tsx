@@ -176,8 +176,8 @@ export default function TeamPage() {
     <main>
       <PageHeader
         eyebrow="People"
-        title="People"
-        lead="Ewing Morris is a partnership of investors, operators, and builders. The firm is intentionally small and organized around judgment, accountability, and long-term alignment with clients."
+        title="A partnership built around judgment."
+        lead="Ewing Morris is a partnership of investors, operators, and builders. The firm is intentionally small, with senior people close to decisions, clients, and the long-term stewardship of capital."
       />
 
       <SectionWrapper>
@@ -196,6 +196,7 @@ export default function TeamPage() {
         <ScrollReveal>
           <div className={styles.groupIntro}>
             <Eyebrow>Leadership</Eyebrow>
+            <h2>Partners responsible for the direction of the firm.</h2>
             <p>
               A small group of partners sets the direction of the firm across investing, wealth relationships, operating discipline, and long-term ownership.
             </p>
@@ -212,6 +213,7 @@ export default function TeamPage() {
         <ScrollReveal>
           <div className={styles.groupIntro}>
             <Eyebrow>Investment Team</Eyebrow>
+            <h2>Investors with different lenses, working from the same discipline.</h2>
             <p>
               The investment team brings different lenses to the same task: careful underwriting, original research, and disciplined capital deployment.
             </p>
@@ -228,6 +230,7 @@ export default function TeamPage() {
         <ScrollReveal>
           <div className={styles.groupIntro}>
             <Eyebrow>Wealth, Client &amp; Operating Team</Eyebrow>
+            <h2>The people who turn investment judgment into durable client work.</h2>
             <p>
               Wealth relationships are sustained by people who can combine portfolio judgment, client partnership, and operational reliability.
             </p>
@@ -244,6 +247,7 @@ export default function TeamPage() {
         <ScrollReveal>
           <div className={styles.groupIntro}>
             <Eyebrow>Advisor</Eyebrow>
+            <h2>Specialist counsel when shareholder work becomes more complex.</h2>
             <p>
               The firm also draws on specialist counsel when a situation demands deeper experience in shareholder engagement and contested governance work.
             </p>
