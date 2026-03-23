@@ -33,6 +33,25 @@
   color: rgba(243, 241, 236, 0.45);
 }
 
+.social {
+  display: flex;
+  gap: var(--space-sm);
+  margin-top: var(--space-md);
+}
+
+.socialLink {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgba(243, 241, 236, 0.4);
+  text-decoration: none;
+  transition: color 200ms ease;
+}
+
+.socialLink:hover {
+  color: var(--color-accent);
+}
+
 .nav {
   display: flex;
   flex-wrap: wrap;
