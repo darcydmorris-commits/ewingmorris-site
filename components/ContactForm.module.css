@@ -54,6 +54,32 @@
   background: var(--color-accent);
 }
 
+.submit:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.successMessage {
+  display: grid;
+  gap: var(--space-sm);
+  padding: var(--space-xl) 0;
+}
+
+.successMessage h3 {
+  font-family: var(--font-serif);
+  font-size: var(--text-h2);
+  font-weight: 400;
+}
+
+.successMessage p {
+  color: var(--color-text-secondary);
+}
+
+.errorMessage {
+  color: #9b3a3a;
+  font-size: var(--text-small);
+}
+
 @media (max-width: 767px) {
   .fieldGrid {
     grid-template-columns: 1fr;

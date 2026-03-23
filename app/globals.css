@@ -102,6 +102,12 @@ input,
 select,
 textarea {
   font: inherit;
+  border-radius: 0;
+}
+
+button,
+[type="submit"] {
+  cursor: pointer;
 }
 
 img {
