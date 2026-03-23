@@ -28,15 +28,25 @@
 }
 
 .wordmark {
-  height: 22px;
+  height: 24px;
   width: auto;
   display: block;
+  filter: brightness(0);
+  transition: filter 300ms ease;
 }
+
+/* On transparent header (dark hero), show white logo */
+.nav:not(.scrolled) .wordmark {
+  filter: brightness(100);
+}
+
+/* ---- Desktop nav ---- */
 
 .desktopNav {
   display: flex;
   justify-content: flex-end;
-  gap: 1.75rem;
+  align-items: center;
+  gap: 2rem;
 }
 
 .navLink,
@@ -47,6 +57,7 @@
   text-transform: uppercase;
   letter-spacing: 0.08em;
   text-decoration: none;
+  transition: color 200ms ease;
 }
 
 .navLink {
@@ -61,11 +72,76 @@
   color: var(--color-heading);
   border-bottom: 1px solid var(--color-border);
   padding-bottom: 0.125rem;
+  transition: border-color 200ms ease;
 }
 
 .cta:hover {
   border-color: var(--color-accent);
 }
+
+/* ---- Dropdown ---- */
+
+.dropdownWrapper {
+  position: relative;
+}
+
+.dropdownTrigger {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+.chevron {
+  width: 0.55rem;
+  height: auto;
+  transition: transform 200ms ease;
+}
+
+.dropdownTrigger[aria-expanded="true"] .chevron {
+  transform: rotate(180deg);
+}
+
+.dropdown {
+  position: absolute;
+  top: calc(100% + 0.75rem);
+  left: 50%;
+  transform: translateX(-50%);
+  min-width: 14rem;
+  background: var(--color-bg-elevated);
+  border: 1px solid var(--color-border-subtle);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  padding: 0.75rem 0;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 200ms ease, visibility 200ms ease;
+}
+
+.dropdownOpen {
+  opacity: 1;
+  visibility: visible;
+}
+
+.dropdownLink {
+  display: block;
+  padding: 0.55rem 1.25rem;
+  font-family: var(--font-sans);
+  font-size: 0.8125rem;
+  font-weight: 500;
+  color: var(--color-text-body);
+  text-decoration: none;
+  transition: color 200ms ease, background-color 200ms ease;
+}
+
+.dropdownLink:hover {
+  color: var(--color-accent);
+  background: var(--color-bg-muted);
+}
+
+/* ---- Hamburger ---- */
 
 .menuButton {
   display: none;
@@ -83,7 +159,14 @@
   height: 1px;
   margin: 0.3rem auto;
   background: var(--color-heading);
+  transition: background 300ms ease;
 }
+
+.nav:not(.scrolled) .menuButton span {
+  background: #ffffff;
+}
+
+/* ---- Mobile overlay ---- */
 
 .overlay {
   position: fixed;
@@ -130,6 +213,7 @@
   font-size: var(--text-h2);
   font-weight: 400;
   color: var(--color-text-inverse);
+  transition: color 200ms ease;
 }
 
 .mobileLink:hover,
@@ -148,7 +232,10 @@
   border-bottom: 1px solid rgba(243, 241, 236, 0.3);
   padding-bottom: 0.25rem;
   align-self: flex-start;
+  transition: color 200ms ease, border-color 200ms ease;
 }
+
+/* ---- Responsive ---- */
 
 @media (max-width: 1023px) {
   .inner {

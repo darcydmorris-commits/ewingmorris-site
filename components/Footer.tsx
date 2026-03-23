@@ -35,6 +35,9 @@ export function Footer() {
         </div>
         <div className={styles.legal}>
           <p>
+            &copy; {new Date().getFullYear()} Ewing Morris &amp; Co. Investment Partners Ltd. All rights reserved.
+          </p>
+          <p>
             The information on this website is provided for general informational purposes only. Any investment with the firm is subject to applicable offering and account documentation, including important information regarding eligibility, strategy terms, and risk considerations.
           </p>
         </div>

@@ -28,12 +28,12 @@ const paths = [
 ];
 
 const stats = [
+  { label: "Assets Under Management", value: "~$1B" },
   { label: "Founded", value: "2011" },
-  { label: "AUM", value: "~$1 billion" },
-  { label: "Families", value: "500+" },
-  { label: "Professionals", value: "17" },
-  { label: "Ownership", value: "100% independent" },
-  { label: "Registration", value: "SEC-registered" },
+  { label: "Families Served", value: "500+" },
+  { label: "Team", value: "17" },
+  { label: "Ownership", value: "Independent" },
+  { label: "Registration", value: "SEC-Registered" },
 ];
 
 const insights = [
@@ -183,10 +183,14 @@ export default function HomePage() {
           <ScrollReveal stagger className={styles.insightsList}>
             {insights.map((item) => (
               <article key={item.title} className={styles.insightRow}>
-                <p className={styles.insightMeta}>{item.date}</p>
-                <p className={styles.insightMeta}>{item.category}</p>
-                <h3 className={styles.insightTitle}>{item.title}</h3>
-                <p className={styles.insightDescription}>{item.description}</p>
+                <div>
+                  <p className={styles.insightMeta}>{item.date}</p>
+                  <p className={styles.insightCategory}>{item.category}</p>
+                </div>
+                <div>
+                  <h3 className={styles.insightTitle}>{item.title}</h3>
+                  <p className={styles.insightDescription}>{item.description}</p>
+                </div>
               </article>
             ))}
           </ScrollReveal>
