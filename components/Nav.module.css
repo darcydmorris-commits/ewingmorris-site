@@ -15,7 +15,7 @@
 .inner {
   height: 100%;
   display: grid;
-  grid-template-columns: auto 1fr auto auto;
+  grid-template-columns: auto 1fr auto auto auto;
   align-items: center;
   gap: var(--space-lg);
 }
@@ -77,6 +77,29 @@
 
 .cta:hover {
   border-color: var(--color-accent);
+}
+
+.portalLink {
+  font-family: var(--font-sans);
+  font-size: var(--text-caption);
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  text-decoration: none;
+  color: var(--color-text-secondary);
+  transition: color 200ms ease;
+}
+
+.portalLink:hover {
+  color: var(--color-accent);
+}
+
+.nav:not(.scrolled) .portalLink {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.nav:not(.scrolled) .portalLink:hover {
+  color: var(--color-accent);
 }
 
 /* ---- Dropdown ---- */
@@ -247,7 +270,8 @@
   }
 
   .desktopNav,
-  .cta {
+  .cta,
+  .portalLink {
     display: none;
   }
 

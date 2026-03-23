@@ -144,6 +144,15 @@ export function Nav() {
             ))}
           </nav>
 
+          <a
+            href="https://ewingmorris.addepar.com"
+            target="_blank"
+            rel="noreferrer"
+            className={styles.portalLink}
+          >
+            Client Login
+          </a>
+
           <Link href="/contact" className={styles.cta}>
             Request a Consultation
           </Link>
@@ -171,6 +180,15 @@ export function Nav() {
                 {item.label}
               </Link>
             ))}
+            <a
+              href="https://ewingmorris.addepar.com"
+              target="_blank"
+              rel="noreferrer"
+              className={styles.mobileCta}
+              onClick={() => setOpen(false)}
+            >
+              Client Login
+            </a>
             <Link href="/contact" className={styles.mobileCta} onClick={() => setOpen(false)}>
               Request a Consultation
             </Link>
