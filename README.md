@@ -2,6 +2,23 @@
 
 Production-oriented public website for Ewing Morris, built with Next.js App Router, TypeScript, and Tailwind CSS.
 
+## Handoff — Remaining Tasks
+
+See `HANDOFF.pdf` in this repo for the full guide (designed for non-developers). Quick checklist:
+
+1. **Team headshots** — Save JPGs to `public/team/`, add `imageSrc` to each entry in `content/team.ts`
+2. **Hero image** — Save to `public/hero.jpg`, reference in `app/page.module.css`
+3. **Contact form** — Create a form at [formspree.io](https://formspree.io), replace `"FORM_ID"` in `components/ContactForm.tsx` line 6
+4. **Social links** — Verify LinkedIn & Instagram URLs in `components/Footer.tsx`
+5. **Client portal URL** — Verify Addepar URL in `components/Nav.tsx` line 148
+6. **Insights content** — Replace sample entries in `content/insights.ts`
+7. **Legal review** — Have counsel review `app/legal/page.tsx` and footer disclaimer
+8. **Domain** — Point `ewingmorris.com` DNS to Vercel (Project → Settings → Domains)
+
+Every push to `main` auto-deploys to Vercel within ~60 seconds.
+
+---
+
 ## Repository Structure
 
 - `app/`
